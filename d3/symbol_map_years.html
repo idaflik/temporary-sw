@@ -37,10 +37,10 @@ var tooltip = d3.select("body")
     
 var countryColorScale = d3.scaleOrdinal()
 // Load GeoJSON file
-d3.json('https://raw.githubusercontent.com/idaflik/data/master/frontex_grants_countries_years.geojson').then((geojson) => {
+d3.json('https://raw.githubusercontent.com/idaflik/temporary-sw/main/R/output/frontex_grants_countries_years.geojson').then((geojson) => {
   
    // Load GeoJSON file
-    d3.json('https://raw.githubusercontent.com/idaflik/data/master/frontex_grants_countries_total_centroid.geojson').then((json_countries) => {
+    d3.json('https://raw.githubusercontent.com/idaflik/temporary-sw/main/R/output/frontex_grants_countries_total_centroid.geojson').then((json_countries) => {
       
       // Step 1: Calculate total "eur" value per country
       var countryTotals = {};
