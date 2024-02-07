@@ -126,7 +126,7 @@ d3.csv("https://raw.githubusercontent.com/idaflik/temporary-sw/main/R/output/fro
   function updateSankey(selectedCountry) {
     // Filter data based on selected country
     var filteredData = selectedCountry ? data.filter(function(d) { return d.country === selectedCountry; }) : data;
-
+    console.log(filteredData)
     // Example: Clear previous diagram
     svg.selectAll("*").remove();
 
@@ -140,7 +140,8 @@ d3.csv("https://raw.githubusercontent.com/idaflik/temporary-sw/main/R/output/fro
       "target": d.beneficiary,
       "value": +d.eur,
       "grant_no": d.grant_no,
-      "unit_sector": d.unit_sector
+      "unit_sector": d.unit_sector,
+      "desc_clean": d.desc_clean
     });
   });
 
@@ -190,15 +191,16 @@ d3.csv("https://raw.githubusercontent.com/idaflik/temporary-sw/main/R/output/fro
 
         // Adjust tooltip position based on mouse x-position
         var tooltipX = d3.event.pageX > window.innerWidth / 2 ? d3.event.pageX - 250 : d3.event.pageX + 10;
-
+        console.log(d.desc_clean)
       d3.select(".tooltip")
       .style("left", tooltipX + "px") // Use the adjusted tooltipX position
           .style("top", d3.event.pageY + "px")
          .style("display", "inline-block")
-         .html("Year/Grant No: " + d.grant_no + "<br>"+
+         .html(
+         "Year/Grant No: " + d.grant_no + "<br>"+
           "<strong>" + d3.format("$.2s")(d.value).replace('$', '€')  + "</strong>"+ "<br>"+
-            "Sector: " + d.unit_sector + "<br>"+
-            "to " + d.target.name);
+          d.desc_clean + "<br>"+
+            "Sector: " + d.unit_sector );
 
       })
       .on("mousemove", function(){
