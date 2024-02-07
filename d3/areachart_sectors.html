@@ -1,0 +1,322 @@
+<!--https://bl.ocks.org/LemoNode/21d81ff82e80cbe4acbfee28ff060b11-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>area chart</title>
+  <meta charset="utf-8">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="country_colors.js"></script>
+  <style>
+    .tooltip-line {
+      stroke: #333;
+      stroke-width: 1;
+      pointer-events: none;
+    }
+
+    .legend {
+      font-size: 12px;
+     font-family: monospace;
+      display: flex;
+      flex-wrap: wrap; /* Allow legend items to wrap to the next row */
+      justify-content: flex-start; /* Left-align the legend items */
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      width: 80px;
+      margin-bottom: 5px; /* Add margin at the bottom of each legend item */
+      margin-right: 5px; /* Horizontal spacing between legend items */
+    }
+
+    .legend-color {
+      width: 12px;
+      height: 12px;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <link href="stylesheet.css" rel="stylesheet" type="text/css">
+  <p>Select the series to display: <select id="KEY"></select></p>
+
+  <svg id="chart"></svg>
+
+  <div class="tooltip" style="display: none;"></div>
+
+  <div id="legend" class="legend"></div>
+
+  <script>
+    var EUformat = d3.formatDefaultLocale({
+      "decimal": ",",
+      "thousands": ".",
+      "grouping": [3],
+      "currency": ["€", ""],
+      "dateTime": "%a %b %e %X %Y",
+      "date": "%d.%m.%Y",
+      "time": "%H:%M:%S",
+      "periods": ["AM", "PM"],
+      "days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "shortDays": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+      "shortMonths": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    })
+
+    var menu = d3.select("#KEY")
+
+    d3.csv("https://raw.githubusercontent.com/idaflik/data/master/frontex_grants_countries_sectors.csv").then(d => chart(d))
+
+    function chart(csv) {
+      var keys = csv.columns.slice(2);
+
+      var KEY = [...new Set(csv.map(d => d.country))]
+      var YEARs = [...new Set(csv.map(d => d.year))]
+
+      var options = d3.select("#KEY").selectAll("option")
+        .data(KEY)
+        .enter().append("option")
+        .text(d => d)
+
+      var svg = d3.select("#chart"),
+        margin = { top: 20, left: 60, bottom: 0, right: 15 },
+        width = window.innerWidth - margin.left - margin.right,
+        height = window.innerHeight - margin.top - margin.bottom - 150;
+      // -100 height to leave space for the selector within iframe
+
+      svg.attr("width", width + margin.left) // margin.right should stay empty
+        .attr("height", height + margin.top) // margin.bottom should stay empty
+
+      var tooltip = d3.select("body")
+        .append("div")
+        .attr("class", "tooltip")
+        .style("display", "none");
+
+      var legend = d3.select("#legend");
+
+      // Use the same margin for the legend as the graph
+      legend.style("margin", `20px ${margin.right}px 0 ${margin.left}px`)
+      .style("max-width", `${width}px`); 
+      
+      var x = d3.scaleBand()
+        .range([margin.left, width + margin.left])
+        .padding(0.1)
+        .paddingOuter(0.2)
+        .paddingInner(0.2)
+
+      var y = d3.scaleLinear()
+        .range([margin.top, height - margin.bottom])
+
+      var yAxis = svg.append("g")
+        .attr("transform", `translate(${margin.left},0)`)
+        .attr("class", "y-axis")
+
+      var xAxis = svg.append("g")
+        .attr("transform", `translate(0,${height - margin.bottom})`)
+        .attr("class", "x-axis")
+
+      var z = d3.scaleOrdinal()
+        .domain(keys)
+        .range(["#8DD3C7", "#ACA4E3", "#FB8072", "#80B1D3", "#FDB462", "#B3DE69", "#F78AC2", "#D9A0DA", "#9AF0B2", "#FFED6F",
+                "#B5E3DB", "#D4D0F1", "#FDC0BA", "#B3D0E5", "#B3D0E5", "#D7EEB0", "#FABCDC", "#E6C1E7", "#CEF8DA", "#FFF7BD",
+                "#59BFAE", "#8276D5", "#FA6351", "#609DC8", "#FC8C0D", "#92CD2D", "#F353A5", "#C670C7", "#5AE782", "#FADB00"])
+       
+        //.range(d3.schemePaired);
+        //.range(["#007fff", "#8a4fff", "#c3bef7", "#98f9ef", "#b3fc98", "#c3ff11", "#ffc311", "#ff7f11", "#ff3f00"]);
+
+          // Create a vertical line for the tooltip
+    var tooltipLine = svg.append("line")
+      .attr("class", "tooltip-line")
+      .style("display", "none");
+
+    // Define a format function with abbreviated numbers
+    const formatAbbreviation = d3.format("$.2s");
+
+    var curCountry; 
+    // Calculate total for each year
+    var totalsByYear = {};
+
+      update(d3.select("#KEY").property("value"), 0)
+
+      function update(input, speed) {
+        var data = csv.filter(f => f.country == input)
+        
+        curCountry = input;
+
+        // Iterate over the data array (which represents each year)
+        data.forEach(function (entry) {
+          // Calculate the total for the current year across all keys (areas)
+          var totalForYear = d3.sum(keys, function (key) {
+            return entry[key];
+          });
+
+          // Store the total in the totalsByYear object
+          totalsByYear[entry.year] = totalForYear;
+        });
+
+        var columns = d3.keys(data[0]);
+
+        // Convert strings to numbers, excluding the "key" column
+        data = data.map(function (d) {
+          var parsedData = { key: d.key };
+
+          // Convert all other columns to numbers
+          columns.forEach(function (column) {
+            if (column !== "country") {
+              parsedData[column] = +d[column];
+            }
+          });
+
+          return parsedData;
+        });
+
+        data.forEach(function (d) {
+          d.total = d3.sum(keys, k => +d[k])
+          return d
+        })
+        
+        y.domain([d3.max(data, d => d.total), 0]).nice();
+        svg.selectAll(".y-axis").transition().duration(speed)
+          .call(d3.axisLeft(y).tickFormat(d3.format("$.2s")))
+          .selectAll(".tick text")
+          .attr("class", "mono-ticks") // Add a class to the ticks
+
+        x.domain(data.map(d => d.year));
+        svg.selectAll(".x-axis").transition().duration(speed)
+        .call(d3.axisBottom(x)
+          .tickSize(0) // To remove tick lines
+          .tickPadding(6) // Adjust padding as needed
+        )
+        .selectAll(".tick text")
+        .attr("transform", function (d) {
+          return "translate(" + (- x.bandwidth() / 2) + ",0)"; // Adjust here
+        })
+        .style("text-anchor", "middle")
+        .attr("class", "mono-ticks") // Add a class to the ticks;
+
+        var area = d3.area()
+          .x(d => x(d.data.year))
+          .y0(d => y(d[0]))
+          .y1(d => y(d[1]))
+          .curve(d3.curveBasis);
+
+          // Use the sorted keys in the stack generator
+          var stackedData = d3.stack().keys(keys)(data);
+
+          // console.log(stackedData)
+
+          var group = svg.selectAll("g.layer")
+          .data(stackedData)
+
+        group.exit().remove()
+
+        group.enter().insert("g", ".y-axis").append("g")
+          .classed("layer", true)
+          .attr("fill", d => z(d.key))
+          .append("path")
+          .attr("class", "area")
+          .attr("d", area)
+          .attr("stroke", "white")
+          .attr("stroke-width", 0.7)
+          .on("mousemove", function(d) {
+            
+            var mouseCoords = d3.mouse(this);
+            var mouseX = mouseCoords[0];
+            var bandIndex = Math.floor((mouseX - (x.range()[0] - x.step() * x.paddingOuter() / 2)) / x.step());
+            var year = x.domain()[bandIndex]
+            
+            var cur_value = d[bandIndex][1] - d[bandIndex][0]
+
+           // Calculate tooltip position
+            var tooltipX = mouseX; // Adjust as needed
+            var tooltipY = mouseCoords[1]; // Adjust as needed
+
+            // Use the abbreviated format for numbers larger than or equal to 1000
+            var formattedCurValue = cur_value >= 1000 ? formatAbbreviation(cur_value) : d3.format("$.0f")(cur_value);
+            
+            tooltip
+            .style("display", "inline-block")
+            .style("left", (x(year) + 5) + "px")
+            .style("top", tooltipY + "px")
+            .html(curCountry + " " + year + "<br>" + " Total: "+ formatAbbreviation(totalsByYear[year])  +"<br>" +d.key + ": " + formatAbbreviation(cur_value) );
+
+             // Update tooltip line position
+            tooltipLine
+              .style("display", "inline-block")
+              .attr("x1", x(year))
+              .attr("x2", x(year))
+              .attr("y1", margin.top)
+              .attr("y2", height - margin.bottom);
+
+            // Set opacity for all areas when any area is hovered
+            svg.selectAll(".area").style("opacity", 0.5).attr("stroke-width", 0); // Adjust the opacity as needed
+
+            // Select the current area element and set its opacity
+            var currentArea = d3.select(this);
+            currentArea.style("opacity", 1)
+            .attr("stroke", "black")
+            .attr("stroke-width", 0.7)
+            .raise(); 
+          })
+          .on("mouseout", function() {
+          tooltip.style("display", "none");
+          svg.selectAll(".area").style("opacity", 1).attr("stroke", "white").attr("stroke-width", 0.7);
+          tooltipLine.style("display", "none");
+        }); 
+
+        group.selectAll(".area")
+          .data(d => [d])
+          .attr("d", area)
+          ;
+          
+
+        var filteredKeys = keys.filter(function (key) {
+          return data.some(function (d) {
+            return d[key] > 0;
+          });
+        });
+
+        var totalsByKey = {};
+        filteredKeys.forEach(function (key) {
+          var totalForKey = d3.sum(data, function (d) { return d[key]; });
+          totalsByKey[key] = totalForKey;
+        });
+
+        filteredKeys.sort(function (a, b) {
+          return totalsByKey[b] - totalsByKey[a];
+        });
+
+        // Remove existing legend items
+        legend.selectAll(".legend-item").remove();
+
+        // Create legend items
+        var legendItems = legend.selectAll(".legend-item")
+          .data(filteredKeys)
+          .enter()
+          .append("div")
+          .attr("class", "legend-item");
+
+        // Append color div
+        legendItems.append("div")
+          .attr("class", "legend-color")
+          .style("background-color", d => z(d));
+
+          console.log(z("ABS"))
+        // Append text
+        legendItems.append("div")
+          .attr("class", "legend-text")
+          .text(d => d);
+
+      }
+
+      var select = d3.select("#KEY")
+        .on("change", function () {
+          update(this.value, 750)
+        })
+    }
+  </script>
+
+</body>
+
+</html>

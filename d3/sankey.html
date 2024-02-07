@@ -1,0 +1,261 @@
+<!--https://bl.ocks.org/LemoNode/21d81ff82e80cbe4acbfee28ff060b11-->
+<html>
+<head>
+  <title>0 - sankey</title>
+<meta charset ="utf-8">
+<!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+<script src="sankey.js"></script>
+
+<style>
+
+.link {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .4;
+}
+
+.link:hover {
+  stroke-opacity: .7;
+}
+
+</style>
+
+</head>
+
+<body>
+<link href="stylesheet.css" rel="stylesheet" type="text/css">
+<!-- <p>Select the series to display: <select id="KEY"></select></p> -->
+<p>Select the series to display: <select id="KEY"></select></p>
+<svg id="chart"></svg>
+
+<script>
+
+var units = "Widgets";
+
+
+	// margin = {top: 20, left: 100, bottom: 0, right: 15},
+	// width = window.innerWidth - margin.left - margin.right,
+	// height = window.innerHeight - margin.top - margin.bottom - 150;
+  // -100 height to leave space for the selector within iframe
+
+var    margin = {top: 10, right: 10, bottom: 10, left: 10},
+  width = window.innerWidth - margin.left - margin.right,
+  height = window.innerHeight - margin.top - margin.bottom - 200;
+  // -100 height to leave space for the selector within iframe
+
+var svg = d3.select("#chart").attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+var tooltip = d3.select("body")
+  .append("div")
+  .attr("class", "tooltip")
+
+var formatNumber = d3.format(".0f"),    // zero decimal places
+format = function(d) { return formatNumber(d) + " " + units; },
+color = d3.scale.ordinal()
+  .range(['#ff8c00', '#eb8411', '#d67d22', '#c27533', '#ae6d45', '#9a6556', '#855e67', '#715678', '#776283', '#7c6e8e', '#827a99', '#8787a4', '#8d93af', '#929fba', '#98abc5'])
+
+// Create an ordinal color scale for countries
+var color = d3.scale.category20();
+
+var sankey = d3.sankey()
+.nodeWidth(2)
+.nodePadding(10)
+.size([width, height]);
+
+var path  = sankey.link();
+
+
+var menu = d3.select("#KEY")
+
+var countryColorScale = d3.scale.ordinal()
+
+d3.json('https://raw.githubusercontent.com/idaflik/data/master/frontex_grants_countries_total_centroid.geojson', function(json_countries) {
+      
+      // Step 1: Calculate total "eur" value per country
+      var countryTotals = {};
+      
+      json_countries.features.forEach(function(feature) {
+          var countryName = feature.properties.name; // Assuming the country name is stored in the "name" property
+          var eurValue = feature.properties.eur; // Assuming the "eur" property contains the value to be summed up
+          
+          if (!countryTotals[countryName]) {
+              countryTotals[countryName] = 0;
+          }
+          countryTotals[countryName] += eurValue;
+      });
+      
+      // Step 2: Sort country names based on total "eur" value
+      var sortedCountryNames = Object.keys(countryTotals).sort(function(a, b) {
+          return countryTotals[b] - countryTotals[a];
+      });
+      
+      // Step 3: Define a color scale for countries using the sorted country names
+      countryColorScale.domain(sortedCountryNames)
+          .range(["#8DD3C7", "#ACA4E3", "#FB8072", "#80B1D3", "#FDB462", "#B3DE69", "#F78AC2", "#D9A0DA", "#9AF0B2", "#FFED6F",
+                  "#B5E3DB", "#D4D0F1", "#FDC0BA", "#B3D0E5", "#B3D0E5", "#D7EEB0", "#FABCDC", "#E6C1E7", "#CEF8DA", "#FFF7BD",
+                  "#59BFAE", "#8276D5", "#FA6351", "#609DC8", "#FC8C0D", "#92CD2D", "#F353A5", "#C670C7", "#5AE782", "#FADB00"])
+          //.range(d3.scale.category10().range()); // Use a D3 color scheme or define your own range of colors
+          //.range(['#8dd3c7', '#ffffb3', '#bebada', '#fb8072', '#80b1d3', '#fdb462', '#b3de69', '#fccde5', '#d9d9d9', '#bc80bd', '#ccebc5', '#ffed6f']);
+  });
+
+d3.csv("https://raw.githubusercontent.com/idaflik/data/master/frontex_grants_all_grants.csv", function(error, data) {
+
+  // Extract unique country names for the dropdown
+  var countryNames = d3.set(data.map(function(d) { return d.country; })).values();
+
+  // Populate the dropdown with country names
+  menu.selectAll("option")
+    .data(countryNames)
+    .enter().append("option")
+    .text(function(d) { return d; });
+
+  // Add an event listener to the dropdown to update the Sankey diagram
+  menu.on("change", function() {
+    var selectedCountry = this.value;
+    updateSankey(selectedCountry);
+  });
+
+  // Initial Sankey diagram
+  updateSankey(countryNames[0]);
+
+  function updateSankey(selectedCountry) {
+    // Filter data based on selected country
+    var filteredData = selectedCountry ? data.filter(function(d) { return d.country === selectedCountry; }) : data;
+
+    // Example: Clear previous diagram
+    svg.selectAll("*").remove();
+
+    //set up graph in same style as original example but empty
+  graph = {"nodes" : [], "links" : []};
+
+  filteredData.forEach(function (d) {
+    graph.nodes.push({ "name": d.country });
+    graph.nodes.push({ "name": d.beneficiary });
+    graph.links.push({ "source": d.country,
+      "target": d.beneficiary,
+      "value": +d.eur,
+      "grant_no": d.grant_no,
+      "unit_sector": d.unit_sector
+    });
+  });
+
+   // return only the distinct / unique nodes
+  graph.nodes = d3.keys(d3.nest()
+    .key(function (d) { return d.name; })
+    .map(graph.nodes))
+    // .sort(function(a, b) { return b.dy - a.dy; });
+
+  // console.log(graph.nodes)
+
+  // loop through each link replacing the text with its index from node
+  graph.links.forEach(function (d, i) {
+    graph.links[i].source = graph.nodes.indexOf(graph.links[i].source);
+    graph.links[i].target = graph.nodes.indexOf(graph.links[i].target);
+  });
+
+  //now loop through each nodes to make nodes an array of objects
+  // rather than an array of strings
+  graph.nodes.forEach(function (d, i) {
+    graph.nodes[i] = { "name": d };
+  });
+
+  // didn't make any difference
+  // graph.links.sort(function(a, b) { return b.dy - a.dy; })
+
+  // console.log(graph)
+
+  sankey
+   .nodes(graph.nodes)
+   .links(graph.links)
+   .layout(0);
+
+
+   // add in the links
+   var link = svg.append("g").selectAll(".link")
+       .data(graph.links)
+      .enter().append("path")
+      // .filter(function(d) { return d.dy > 0 })
+       .attr("class", "link")
+       .attr("d", path)
+       .style("stroke-width", function(d) { return (Math.max(2, d.dy) - 1); })   // for some reason dy is negative in this case
+       .style("stroke", function (d) {
+        return countryColorScale(d.source.name);
+      })
+      .on("mouseover", function(d){
+
+        // Adjust tooltip position based on mouse x-position
+        var tooltipX = d3.event.pageX > window.innerWidth / 2 ? d3.event.pageX - 250 : d3.event.pageX + 10;
+
+      d3.select(".tooltip")
+      .style("left", tooltipX + "px") // Use the adjusted tooltipX position
+          .style("top", d3.event.pageY + "px")
+         .style("display", "inline-block")
+         .html("Year/Grant No: " + d.grant_no + "<br>"+
+          "<strong>" + d3.format("$.2s")(d.value).replace('$', '€')  + "</strong>"+ "<br>"+
+            "Sector: " + d.unit_sector + "<br>"+
+            "to " + d.target.name);
+
+      })
+      .on("mousemove", function(){
+        // Adjust tooltip position based on mouse x-position
+        var tooltipX = d3.event.pageX > window.innerWidth / 2 ? d3.event.pageX - 250 : d3.event.pageX + 10;
+
+        d3.select(".tooltip")
+        .style("left", tooltipX + "px") // Use the adjusted tooltipX position
+          .style("top", d3.event.pageY + "px");
+      })
+      .on("mouseout",function(){
+        d3.select(".tooltip")
+        .style("display", "none");
+
+       })
+
+
+ // add in the nodes
+   var node = svg.append("g").selectAll(".node")
+       .data(graph.nodes)
+     .enter().append("g")
+       .attr("class", "node")
+       .attr("transform", function(d) {
+       return "translate(" + d.x + "," + d.y + ")"; })
+
+ // add the rectangles for the nodes
+   node.append("rect")
+       .attr("height", function(d) { return d.dy; })
+       .attr("width", sankey.nodeWidth())
+       .style("fill", "#666666")
+     .append("title")
+       .text(function(d) {
+       return d.name + "\n" + format(d.value); });
+
+       // Calculate the total value of all links
+var totalValue = d3.sum(graph.links, function(d) {
+    return d.value;
+});
+
+ // add in the title for the nodes
+   node.append("text")
+        .attr("class", "sankey_label")
+        .attr("class", "mono-ticks")
+       .attr("x", -6)
+       .attr("y", function(d) { return d.dy / 2; })
+       .attr("dy", ".35em")
+       .attr("text-anchor", "end")
+       //.style('pointer-events', 'none')
+       .attr("transform", null)
+       .text(function(d) { return d.name ; })
+       .filter(function(d) { return d.x < width / 2; })
+       .attr("x", 6 + sankey.nodeWidth())
+       .attr("text-anchor", "start")
+       .text(function(d) { return d.name + " (" + d3.format("$.2s")(totalValue).replace('$', '€') + " in total)"; });
+  }
+});
+</script>
+
+</body>
+</html>
