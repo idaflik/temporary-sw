@@ -311,22 +311,35 @@ for(cur_country in unique(alldata_sorted$country)){
             glue("output/frontex_grants_all_{cur_country}.csv"))
 }
 
-sankey_agg <- data_allyears_clean %>%
-  group_by(country, beneficiary)%>%
-  summarize(eur = sum(eur, na.rm = T))
+sankey_grants <- alldata_sorted %>%
+  group_by(country)%>%
+  mutate(max_year = sum(eur, na.rm=T))%>%
+  mutate(above_thres = if_else(eur >= 0.01 * max_year, T, F))%>%
+  mutate(grant_no = if_else(above_thres == T, grant_no, "Smaller grants"))%>%
+  group_by(country, beneficiary, grant_no)%>%
+  mutate(n_unit_sector = n_distinct(unit_sector_long))%>%
+  mutate(unit_sector_long = if_else(n_unit_sector == 1, unit_sector_long, "various"))%>%
+  group_by(country, beneficiary, grant_no, unit_sector_long)%>%
+  summarize(eur = sum(eur, na.rm=T))
 
-sankey <- sankey_agg %>%
-  group_by(country) %>%
-  summarize(total_eur = sum(eur)) %>%
-  arrange(desc(total_eur)) %>%
-  inner_join(sankey_agg, by = "country") %>%
-  group_by(country) %>%
-  mutate(rank = rank(desc(eur))) %>%
-  arrange(desc(total_eur), rank) %>%
-  ungroup() %>%
-  select(-total_eur, -rank )
+write_csv(sankey_grants, "output/frontex_grants_sankey.csv")
 
-write_csv(sankey, "output/frontex_grants_beneficiaries.csv")
+# sankey_agg <- data_allyears_clean %>%
+#   group_by(country, beneficiary)%>%
+#   summarize(eur = sum(eur, na.rm = T))
+# 
+# sankey <- sankey_agg %>%
+#   group_by(country) %>%
+#   summarize(total_eur = sum(eur)) %>%
+#   arrange(desc(total_eur)) %>%
+#   inner_join(sankey_agg, by = "country") %>%
+#   group_by(country) %>%
+#   mutate(rank = rank(desc(eur))) %>%
+#   arrange(desc(total_eur), rank) %>%
+#   ungroup() %>%
+#   select(-total_eur, -rank )
+# 
+# write_csv(sankey, "output/frontex_grants_beneficiaries.csv")
 
 sankey %>%
   group_by(beneficiary)%>%
@@ -357,6 +370,51 @@ countries_sectors <- bind_rows(countries_sectors_agg %>%
   rename("n.a." = "<NA>")
 
 write_csv(countries_sectors, "output/frontex_grants_countries_sectors.csv")
+
+countries_projects_singles <- data_allyears_clean %>%
+  group_by(year, country, project_clean)%>%
+  summarize(eur = sum(eur, na.rm=T))%>%
+  group_by(country, year)%>%
+  mutate(total_year = sum(eur, na.rm=T))%>%
+  group_by(country)%>%
+  mutate(max_year = max(total_year))%>%
+  group_by(country, project_clean)%>%
+  mutate(max_project = max(eur, na.rm=T))%>%
+  ungroup()%>%
+  mutate(above_thres = if_else(max_project >= 0.05 * max_year, T, F))%>%
+  mutate(project_clean = if_else(above_thres == T, project_clean, "Other"))%>%
+  group_by(year, country, project_clean)%>%
+  summarize(eur = sum(eur, na.rm=T))%>%
+  group_by(country)%>%
+  filter(n_distinct(year) > 1)%>%
+  ungroup()
+
+countries_projects_agg <- countries_projects_singles %>%
+  group_by(year, project_clean)%>%
+  summarize(eur = sum(eur, na.rm = T),
+            country = "all")%>%
+  group_by(country, year)%>%
+  mutate(total_year = sum(eur, na.rm=T))%>%
+  group_by(country)%>%
+  mutate(max_year = max(total_year))%>%
+  group_by(country, project_clean)%>%
+  mutate(max_project = max(eur, na.rm=T))%>%
+  ungroup()%>%
+  mutate(above_thres = if_else(max_project >= 0.05 * max_year, T, F))%>%
+  mutate(project_clean = if_else(above_thres == T, project_clean, "Other"))%>%
+  group_by(year, country, project_clean)%>%
+  summarize(eur = sum(eur, na.rm=T))
+
+countries_projects <- bind_rows(countries_projects_agg %>%
+                                  ungroup()%>%
+                                  spread(key = project_clean, value = eur),
+                                countries_projects_singles %>%
+                                  ungroup()%>%
+                                  spread(key = project_clean, value = eur) %>%
+                                  arrange(country))%>%
+  mutate_all(~replace_na(.,0))
+
+write_csv(countries_projects, "output/frontex_grants_countries_projects.csv")
 
 countries <- ne_countries(returnclass = "sf", scale = "medium")%>%
   filter(name_long != "France")%>%
@@ -414,50 +472,3 @@ if (file.exists(fn)){
 } 
 write_sf(geo_grants %>% mutate(geometry = st_centroid(geometry)), 
          fn)
-
-countries_projects_singles <- data_allyears_clean %>%
-  group_by(year, country, project_clean)%>%
-  summarize(eur = sum(eur, na.rm=T))%>%
-  group_by(country, year)%>%
-  mutate(total_year = sum(eur, na.rm=T))%>%
-  group_by(country)%>%
-  mutate(max_year = max(total_year))%>%
-  group_by(country, project_clean)%>%
-  mutate(max_project = max(eur, na.rm=T))%>%
-  ungroup()%>%
-  mutate(above_thres = if_else(max_project >= 0.05 * max_year, T, F))%>%
-  mutate(project_clean = if_else(above_thres == T, project_clean, "Other"))%>%
-  group_by(year, country, project_clean)%>%
-  summarize(eur = sum(eur, na.rm=T))%>%
-  group_by(country)%>%
-  filter(n_distinct(year) > 1)%>%
-  ungroup()
-
-countries_projects_agg <- countries_projects_singles %>%
-  group_by(year, project_clean)%>%
-  summarize(eur = sum(eur, na.rm = T),
-            country = "all")%>%
-  group_by(country, year)%>%
-  mutate(total_year = sum(eur, na.rm=T))%>%
-  group_by(country)%>%
-  mutate(max_year = max(total_year))%>%
-  group_by(country, project_clean)%>%
-  mutate(max_project = max(eur, na.rm=T))%>%
-  ungroup()%>%
-  mutate(above_thres = if_else(max_project >= 0.05 * max_year, T, F))%>%
-  mutate(project_clean = if_else(above_thres == T, project_clean, "Other"))%>%
-  group_by(year, country, project_clean)%>%
-  summarize(eur = sum(eur, na.rm=T))
-
-countries_projects <- bind_rows(countries_projects_agg %>%
-                                  ungroup()%>%
-                                  spread(key = project_clean, value = eur),
-                                countries_projects_singles %>%
-                                  ungroup()%>%
-                                  spread(key = project_clean, value = eur) %>%
-                                  arrange(country))%>%
-  mutate_all(~replace_na(.,0))
-
-write_csv(countries_projects, "output/frontex_grants_countries_projects.csv")
-
-

@@ -116,15 +116,12 @@
         .attr("transform", `translate(0,${height - margin.bottom})`)
         .attr("class", "x-axis")
 
-      var z = d3.scaleOrdinal()
-        .domain(keys)
-        .range(["#8DD3C7", "#ACA4E3", "#FB8072", "#80B1D3", "#FDB462", "#B3DE69", "#F78AC2", "#D9A0DA", "#9AF0B2", "#FFED6F",
-                "#B5E3DB", "#D4D0F1", "#FDC0BA", "#B3D0E5", "#B3D0E5", "#D7EEB0", "#FABCDC", "#E6C1E7", "#CEF8DA", "#FFF7BD",
-                "#59BFAE", "#8276D5", "#FA6351", "#609DC8", "#FC8C0D", "#92CD2D", "#F353A5", "#C670C7", "#5AE782", "#FADB00"])
-       
-        //.range(d3.schemePaired);
-        //.range(["#007fff", "#8a4fff", "#c3bef7", "#98f9ef", "#b3fc98", "#c3ff11", "#ffc311", "#ff7f11", "#ff3f00"]);
-
+        var uniqueKeys = [...new Set(keys)];
+        var z = d3.scaleOrdinal()
+            .domain(uniqueKeys)
+            .range(["#8DD3C7", "#ACA4E3", "#FB8072", "#80B1D3", "#FDB462", "#B3DE69", "#F78AC2", "#D9A0DA", "#9AF0B2", "#FFED6F",
+                    "#B5E3DB", "#D4D0F1", "#FDC0BA", "#B3D0E5", "#B3D0E5", "#D7EEB0", "#FABCDC", "#E6C1E7", "#CEF8DA", "#FFF7BD",
+                    "#59BFAE", "#8276D5", "#FA6351", "#609DC8", "#FC8C0D", "#92CD2D", "#F353A5", "#C670C7", "#5AE782", "#FADB00"]);
           // Create a vertical line for the tooltip
     var tooltipLine = svg.append("line")
       .attr("class", "tooltip-line")
@@ -175,17 +172,6 @@
           d.total = d3.sum(keys, k => +d[k])
           return d
         })
-        
-        // Calculate total value for each key
-        var keyTotals = {};
-        keys.forEach(function(key) {
-            keyTotals[key] = d3.sum(data, function(d) { return +d[key]; });
-        });
-
-        // Sort keys based on total values
-        keys.sort(function(a, b) {
-            return keyTotals[a]- keyTotals[b];
-        });
 
         y.domain([d3.max(data, d => d.total), 0]).nice();
         svg.selectAll(".y-axis").transition().duration(speed)
@@ -214,17 +200,6 @@
 
           // Use the sorted keys in the stack generator
           var stackedData = d3.stack().keys(keys)(data);
-
-          // Sort the stacked data based on the total value of each stack
-          stackedData.sort(function(a, b) {
-              // Calculate the total value of each stack
-              var totalA = d3.sum(a, function(d) { return d[1] - d[0]; });
-              var totalB = d3.sum(b, function(d) { return d[1] - d[0]; });
-              // Sort in descending order
-              return totalB - totalA;
-          });
-
-          // console.log(stackedData)
 
           var group = svg.selectAll("g.layer")
           .data(stackedData)
@@ -321,7 +296,6 @@
           .attr("class", "legend-color")
           .style("background-color", d => z(d));
 
-          console.log(z("ABS"))
         // Append text
         legendItems.append("div")
           .attr("class", "legend-text")
