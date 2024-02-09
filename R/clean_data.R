@@ -322,7 +322,12 @@ sankey_grants <- alldata_sorted %>%
   mutate(n_projects = n_distinct(project_clean))%>%
   mutate(project_clean = if_else(n_projects == 1, project_clean, "various"))%>%
   group_by(country,project_clean, beneficiary, grant_no, unit_sector_long)%>%
-  summarize(eur = sum(eur, na.rm=T))
+  summarize(eur = sum(eur, na.rm=T))%>%
+  group_by(country) %>%
+  mutate(rank = if_else(grant_no == "Smaller grants", 10000, rank(desc(eur)))) %>%
+  arrange(country, rank) %>%
+  ungroup() %>%
+  select(-rank)
 
 write_csv(sankey_grants, "output/frontex_grants_sankey.csv")
 
