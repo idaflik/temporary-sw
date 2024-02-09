@@ -19,7 +19,7 @@ Albania,Human Resources,Aparati i Drejtorisë së Policisë së Shtetit,2019/180
 Albania,Human Resources,Aparati i Drejtorisë së Policisë së Shtetit,2019/221,Field Deployment Unit,132308.58
 Albania,Human Resources,Aparati i Drejtorisë së Policisë së Shtetit,2019/273,Field Deployment Unit,129835.52
 Albania,FOA,Aparati i Drejtorisë së Policisë së Shtetit,2021/437,Deployment Management Division,100868.9
-Albania,various,Aparati i Drejtorisë së Policisë së Shtetit,Smaller grants,various,1664399.89
+Albania,various projects,Aparati i Drejtorisë së Policisë së Shtetit,Multiple smaller grants,various,1664399.89
 Austria,FOA,Federal Office for Immigration and Asylum,2018/268,European Centre for Returns,3355711
 Austria,Technical Equipment & Human Resources,Federal Ministry of Interior,2020/28,Field Deployment Unit,3088412.2
 Austria,Return Operations,Federal Office for Immigration and Asylum,2018/93,Return Support Unit,3030526
@@ -35,8 +35,8 @@ Austria,FOA,Federal Ministry of Interior,2019/324,European Centre for Returns,11
 Austria,Human Resources,Federal Ministry of Interior,2022/233,Deployment Management Division,1088160.7
 Austria,Human Resources,Federal Ministry of Interior,2021/315,Deployment Management Division,891614.38
 Austria,European Centre for Returns,Federal Ministry of Interior,2020/56,European Centre for Returns,849853.74
-Austria,European Centre for Returns,Federal Office for Immigration and Asylum,Smaller grants,European Centre for Returns,1464
-Austria,various,Federal Ministry of Interior,Smaller grants,various,44912711.29
+Austria,European Centre for Returns,Federal Office for Immigration and Asylum,Multiple smaller grants,European Centre for Returns,1464
+Austria,various projects,Federal Ministry of Interior,Multiple smaller grants,various,44912711.29
 Belarus,Focal Points,State Border Committee,2016/843,Land Borders Sector,25017
 Belarus,Focal Points,State Border Committee,2011/206/,Air Border Sector,13398.9
 Belarus,Human Resources,State Border Committee,2019/270,Field Deployment Unit,13052.93
@@ -78,12 +78,12 @@ Belgium,Human Resources,Federal Police,2021/296,Deployment Management Division,2
 Belgium,Return Operations,Department of Federal Immigration (Dienst Vreemdelingenzaken),2016/1606,Return Support Unit,216510
 Belgium,Return Operations,Department of Federal Immigration (Dienst Vreemdelingenzaken),2016/1275,Return Support Unit,210907
 Belgium,European Centre for Returns,Department of Federal Immigration (Dienst Vreemdelingenzaken),2022/321,European Centre for Returns,205559
-Belgium,European Centre for Returns,Belgian Immigration Office,Smaller grants,European Centre for Returns,19101.32
-Belgium,European Centre for Returns,"Caritas International Belgium, Non-profit association",Smaller grants,European Centre for Returns,128500
-Belgium,European Centre for Returns,Fedasil (Federaal agentschap voor de opvang van asielzoekers),Smaller grants,European Centre for Returns,31921.28
-Belgium,White Sea II,FOD Financiën,Smaller grants,Law Enforcement Sector,45360
-Belgium,various,Department of Federal Immigration (Dienst Vreemdelingenzaken),Smaller grants,various,1682039.63
-Belgium,various,Federal Police,Smaller grants,various,2363314.31
+Belgium,European Centre for Returns,Belgian Immigration Office,Multiple smaller grants,European Centre for Returns,19101.32
+Belgium,European Centre for Returns,"Caritas International Belgium, Non-profit association",Multiple smaller grants,European Centre for Returns,128500
+Belgium,European Centre for Returns,Fedasil (Federaal agentschap voor de opvang van asielzoekers),Multiple smaller grants,European Centre for Returns,31921.28
+Belgium,White Sea II,FOD Financiën,Multiple smaller grants,Law Enforcement Sector,45360
+Belgium,various projects,Department of Federal Immigration (Dienst Vreemdelingenzaken),Multiple smaller grants,various,1682039.63
+Belgium,various projects,Federal Police,Multiple smaller grants,various,2363314.31
 Bosnia and Herzegovina,Human Resources,Border Police of Bosnia and Herzegovina,2019/305,Field Deployment Unit,14913.66
 Bosnia and Herzegovina,Human Resources,Border Police of Bosnia and Herzegovina,2019/326,Field Deployment Unit,14211.74
 Bosnia and Herzegovina,Human Resources,Border Police of Bosnia and Herzegovina,2018/340,Operational Response Division,8750.46
@@ -142,9 +142,9 @@ Bulgaria,Human Resources,Chief Directorate Border Police - Ministry of Interior,
 Bulgaria,Human Resources,Chief Directorate Border Police - Ministry of Interior,2021/274,Field Deployment Unit,247435
 Bulgaria,Poseidon,Chief Directorate Border Police - Ministry of Interior,2016/1154,Return Support Unit,237090
 Bulgaria,Technical Equipment,Chief Directorate Border Police - Ministry of Interior,2020/130,Coast Guard Sector,231733
-Bulgaria,various,Bulgarian Ministry of Interior,Smaller grants,various,132750.9
-Bulgaria,various,Chief Directorate Border Police - Ministry of Interior,Smaller grants,various,7520772.77
-Bulgaria,various,National Police Service - Ministry of Interior,Smaller grants,various,7141.7
+Bulgaria,various projects,Bulgarian Ministry of Interior,Multiple smaller grants,various,132750.9
+Bulgaria,various projects,Chief Directorate Border Police - Ministry of Interior,Multiple smaller grants,various,7520772.77
+Bulgaria,various projects,National Police Service - Ministry of Interior,Multiple smaller grants,various,7141.7
 Cape Verde,Focal Points,Direccao de Estrangeiros e Fronteiras,2016/1377,Air Border Sector,2622
 Cape Verde,Focal Points,Direccao de Estrangeiros e Fronteiras,2015/1049,Air Border Sector,2604
 Cape Verde,Focal Points,Direccao de Estrangeiros e Fronteiras,2014/857,Air Border Sector,1914.88
@@ -177,9 +177,9 @@ Croatia,Poseidon,"Directorate for Financial-Material Affairs, Ministry of Interi
 Croatia,Technical Equipment & Human Resources,Croatian Ministry of Interior,2020/205,Field Deployment Unit,191311
 Croatia,Poseidon,"Directorate for Financial-Material Affairs, Ministry of Interior",2017/1690,Sea Border Sector,178202
 Croatia,Eurocup,Croatian Ministry of Interior,2008/112/,Land Borders Sector,166680
-Croatia,on EU-southeastern external border: efficiency with high ethical standards - land border surveillance training with implication on fundamental rights. An EU and non-EU training initiative.,"Police Academy, Ministry of Interior",Smaller grants,Training Unit,55500
-Croatia,various,Croatian Ministry of Interior,Smaller grants,various,568839.3
-Croatia,various,"Directorate for Financial-Material Affairs, Ministry of Interior",Smaller grants,various,1167645.77
+Croatia,on EU-southeastern external border: efficiency with high ethical standards - land border surveillance training with implication on fundamental rights. An EU and non-EU training initiative.,"Police Academy, Ministry of Interior",Multiple smaller grants,Training Unit,55500
+Croatia,various projects,Croatian Ministry of Interior,Multiple smaller grants,various,568839.3
+Croatia,various projects,"Directorate for Financial-Material Affairs, Ministry of Interior",Multiple smaller grants,various,1167645.77
 Cyprus,Poseidon,"Cyprus Police, Police Headquarters",2015/1111,Sea Border Sector,211787
 Cyprus,Human Resources,"Cyprus Police, Aliens and Immigration Unit",2022/209,Deployment Management Division,111682.56
 Cyprus,European Centre for Returns,Civil Registry and Migration Department (CRMD),2022/309,European Centre for Returns,78896
@@ -203,8 +203,8 @@ Cyprus,FOA,"Cyprus Police, Police Headquarters",2017/1493,Land Borders Sector,14
 Cyprus,Eurocup,Ministry of Justice and Public Order,2008/113/,Land Borders Sector,13989.66
 Cyprus,Human Resources,"Cyprus Police, Aliens and Immigration Unit",2022/187,Deployment Management Division,13960.32
 Cyprus,Poseidon,"Cyprus Police, Police Headquarters",2017/695,Return Support Unit,12625
-Cyprus,various,Cyprus Police,Smaller grants,various,8677.66
-Cyprus,various,"Cyprus Police, Police Headquarters",Smaller grants,various,142451.58
+Cyprus,various projects,Cyprus Police,Multiple smaller grants,various,8677.66
+Cyprus,various projects,"Cyprus Police, Police Headquarters",Multiple smaller grants,various,142451.58
 Czech Republic,Technical Equipment & Human Resources,Police of the Czech Republic,2020/40,Field Deployment Unit,3392821
 Czech Republic,Human Resources,Police of the Czech Republic,2019/45,Field Deployment Unit,2885602.01
 Czech Republic,Human Resources,Police of the Czech Republic,2018/23,Operational Response Division,2233850
@@ -216,10 +216,10 @@ Czech Republic,Human Resources,Police of the Czech Republic,2022/164,Deployment 
 Czech Republic,Poseidon,Police of the Czech Republic,2016/496,Return Support Unit,224746
 Czech Republic,Human Resources,Police of the Czech Republic,2021/241,Deployment Management Division,198800.16
 Czech Republic,Support Cat.2,Police of the Czech Republic,2020/305,Task Force Deployment Management,198113
-Czech Republic,various,Czech Ministry of Interior,Smaller grants,various,122221.42
-Czech Republic,various,"Directorate of Alien and Border Police, Police of the Czech Republic",Smaller grants,various,419025.12
-Czech Republic,various,"International Police Cooperation Directorate, Police of the Czech Republic",Smaller grants,various,616137.85
-Czech Republic,various,Police of the Czech Republic,Smaller grants,various,3722119.02
+Czech Republic,various projects,Czech Ministry of Interior,Multiple smaller grants,various,122221.42
+Czech Republic,various projects,"Directorate of Alien and Border Police, Police of the Czech Republic",Multiple smaller grants,various,419025.12
+Czech Republic,various projects,"International Police Cooperation Directorate, Police of the Czech Republic",Multiple smaller grants,various,616137.85
+Czech Republic,various projects,Police of the Czech Republic,Multiple smaller grants,various,3722119.02
 Denmark,Human Resources,Danish National Police,2018/19,Operational Response Division,1915551
 Denmark,Technical Equipment & Human Resources,"Joint Operations Staff, Defence Command",2021/69,Field Deployment Unit,1862602
 Denmark,Human Resources,Danish National Police,2022/237,Deployment Management Division,1855241.94
@@ -254,11 +254,11 @@ Denmark,Technical Equipment,Defence Command,2021/420,Field Operations Unit,48650
 Denmark,Technical Equipment,Defence Command,2022/81,Field Operations Unit,481642
 Denmark,Technical Equipment,Defence Command,2022/196,Field Operations Unit,475120
 Denmark,Return Operations,Danish National Police,2016/1490,Return Support Unit,469350
-Denmark,European Centre for Returns,Danish Return Agency,Smaller grants,European Centre for Returns,36042
-Denmark,Technical Equipment & Human Resources,Danish Immigration Service,Smaller grants,various,131889
-Denmark,various,Danish Emergency Management Agency,Smaller grants,various,452838.06
-Denmark,various,Danish National Police,Smaller grants,various,10842604.32
-Denmark,various,Defence Command,Smaller grants,various,4054713.37
+Denmark,European Centre for Returns,Danish Return Agency,Multiple smaller grants,European Centre for Returns,36042
+Denmark,Technical Equipment & Human Resources,Danish Immigration Service,Multiple smaller grants,various,131889
+Denmark,various projects,Danish Emergency Management Agency,Multiple smaller grants,various,452838.06
+Denmark,various projects,Danish National Police,Multiple smaller grants,various,10842604.32
+Denmark,various projects,Defence Command,Multiple smaller grants,various,4054713.37
 Egypt,2022/CFP/POST/01,"Life Makers Foundation Egypt, Non-profit organisation",2022/126,European Centre for Returns,108347
 Estonia,Human Resources,Police and Border Guard Board,2018/88,Operational Response Division,1368450
 Estonia,Human Resources,Police and Border Guard Board,2019/68,Field Deployment Unit,1261354
@@ -279,8 +279,8 @@ Estonia,European Centre for Returns,Police and Border Guard Board,2022/24,Europe
 Estonia,Technical Equipment,Police and Border Guard Board,2018/79,Operational Response Division,189931
 Estonia,European Centre for Returns,Police and Border Guard Board,2020/1,European Centre for Returns,186025.88
 Estonia,RABIT 2010,Police and Border Guard Board,2010/723/,Pooled Resources Unit,179328.68
-Estonia,various,Police and Border Guard Board,Smaller grants,various,8209881.72
-Estonia,various,Tallinn University of Technology,Smaller grants,Training Unit,101253.58
+Estonia,various projects,Police and Border Guard Board,Multiple smaller grants,various,8209881.72
+Estonia,various projects,Tallinn University of Technology,Multiple smaller grants,Training Unit,101253.58
 Finland,Poseidon,Finnish Border Guard,2016/43,Sea Border Sector,2823554
 Finland,Poseidon,Finnish Border Guard,2017/1456,Sea Border Sector,1528031
 Finland,Poseidon,Finnish Border Guard,2017/740,Sea Border Sector,1264772
@@ -313,12 +313,12 @@ Finland,Technical Equipment,Finnish Border Guard,2021/63,Field Deployment Unit,3
 Finland,Triton,Finnish Border Guard,2014/972,Sea Border Sector,374177.57
 Finland,Indalo,Finnish Border Guard,2013/280,Sea Border Sector,373739.88
 Finland,Technical Equipment,Finnish Border Guard,2019/121b,Field Deployment Unit,368178
-Finland,European Centre for Returns,Finnish Immigration Service,Smaller grants,European Centre for Returns,138622.5
-Finland,Technical Equipment,Finnish Customs,Smaller grants,Operational Response Division,14793
-Finland,various,Finnish Border Guard,Smaller grants,various,8113726.61
-Finland,various,Finnish Ministry of Interior,Smaller grants,Air Border Sector,29026.15
-Finland,various,Finnish National Police Board,Smaller grants,various,708224.47
-Finland,various,Helsinki Police Department,Smaller grants,various,7044708.75
+Finland,European Centre for Returns,Finnish Immigration Service,Multiple smaller grants,European Centre for Returns,138622.5
+Finland,Technical Equipment,Finnish Customs,Multiple smaller grants,Operational Response Division,14793
+Finland,various projects,Finnish Border Guard,Multiple smaller grants,various,8113726.61
+Finland,various projects,Finnish Ministry of Interior,Multiple smaller grants,Air Border Sector,29026.15
+Finland,various projects,Finnish National Police Board,Multiple smaller grants,various,708224.47
+Finland,various projects,Helsinki Police Department,Multiple smaller grants,various,7044708.75
 France,Human Resources,"Ministères économiques et financiers - direction du budget, bureau de l'économie, des finances et de l'outre-mer",2022/165,Deployment Management Division,3380266.3
 France,Human Resources,"Ministères économiques et financiers - direction du budget, bureau de l'économie, des finances et de l'outre-mer",2021/273,Field Deployment Unit,2249335.13
 France,Human Resources,Direction Central de la Police aux Frontieres,2018/129,Operational Response Division,2067632
@@ -338,19 +338,19 @@ France,FOA,"Ministère de l'intérieur, Direction générale des étrangers en F
 France,Nautilus,Direction Central de la Police aux Frontieres,2008/207/,Sea Border Sector,961185.25
 France,Human Resources,"Ministères économiques et financiers - direction du budget, bureau de l'économie, des finances et de l'outre-mer",2021/304,Deployment Management Division,906562.39
 France,European Centre for Returns,"Ministère de l'intérieur, Direction générale des étrangers en France",2020/159,European Centre for Returns,828519.87
-France,Human Resources,Ministère de la Transition écologique et solidaire,Smaller grants,Coast Guard Sector,11997
-France,Human Resources,"Ministères économiques et financiers - direction du budget, bureau de l'économie, des finances et de l'outre-mer",Smaller grants,Deployment Management Division,20363.05
-France,Training on electronic storage of data in electronic Machine Readable Travel Documents,Ecole Nationale Superieure de la Police,Smaller grants,Training Unit,43435
-France,various,Direction Central de la Police aux Frontieres,Smaller grants,various,10634178.88
-France,various,Direction Centrale de la Police Judiciaire,Smaller grants,various,1751700
-France,various,Direction Centrale de la Securite Publique,Smaller grants,various,1832991
-France,various,Direction Centrale des compagnies republicaines de securite,Smaller grants,various,2617314
-France,various,Direction Generale de la Gendarmerie nationale,Smaller grants,various,4433922
-France,various,Direction Generale des Douanes et Droits Indirects,Smaller grants,various,9622922.43
-France,various,French Navy,Smaller grants,various,8659275.51
-France,various,"Ministere de l'Immigration, de l'Integration, de l'Identite Nationale et du Developpement Solidaire",Smaller grants,Return Operations Sector,2038411.64
-France,various,"Ministère de l'intérieur, Direction générale des étrangers en France",Smaller grants,various,10361164.4
-France,various,Prefecture de Police,Smaller grants,various,2758112.85
+France,Human Resources,Ministère de la Transition écologique et solidaire,Multiple smaller grants,Coast Guard Sector,11997
+France,Human Resources,"Ministères économiques et financiers - direction du budget, bureau de l'économie, des finances et de l'outre-mer",Multiple smaller grants,Deployment Management Division,20363.05
+France,Training on electronic storage of data in electronic Machine Readable Travel Documents,Ecole Nationale Superieure de la Police,Multiple smaller grants,Training Unit,43435
+France,various projects,Direction Central de la Police aux Frontieres,Multiple smaller grants,various,10634178.88
+France,various projects,Direction Centrale de la Police Judiciaire,Multiple smaller grants,various,1751700
+France,various projects,Direction Centrale de la Securite Publique,Multiple smaller grants,various,1832991
+France,various projects,Direction Centrale des compagnies republicaines de securite,Multiple smaller grants,various,2617314
+France,various projects,Direction Generale de la Gendarmerie nationale,Multiple smaller grants,various,4433922
+France,various projects,Direction Generale des Douanes et Droits Indirects,Multiple smaller grants,various,9622922.43
+France,various projects,French Navy,Multiple smaller grants,various,8659275.51
+France,various projects,"Ministere de l'Immigration, de l'Integration, de l'Identite Nationale et du Developpement Solidaire",Multiple smaller grants,Return Operations Sector,2038411.64
+France,various projects,"Ministère de l'intérieur, Direction générale des étrangers en France",Multiple smaller grants,various,10361164.4
+France,various projects,Prefecture de Police,Multiple smaller grants,various,2758112.85
 Georgia,Human Resources,Patrol Police Department,2019/194,Field Deployment Unit,27493.65
 Georgia,Human Resources,Patrol Police Department,2019/218,Field Deployment Unit,26983.26
 Georgia,Focal Points,Patrol Police Department,2021/327,Deployment Management Division,26891.24
@@ -376,8 +376,8 @@ Georgia,European Centre for Returns,Patrol Police Department,2022/340,European C
 Georgia,European Centre for Returns,Patrol Police Department,2022/400,European Centre for Returns,8346
 Georgia,Operational Activities LAND (MOA - LAND),Patrol Police Department,2021/234,Field Deployment Unit,7869.85
 Georgia,European Centre for Returns,Patrol Police Department,2018/388,European Centre for Returns,7623.75
-Georgia,various,Border Police of Georgia,Smaller grants,various,37585.79
-Georgia,various,Patrol Police Department,Smaller grants,various,321033.8
+Georgia,various projects,Border Police of Georgia,Multiple smaller grants,various,37585.79
+Georgia,various projects,Patrol Police Department,Multiple smaller grants,various,321033.8
 Germany,European Centre for Returns,Federal Police Regional Office Bad Bramstedt,2021/191,European Centre for Returns,8989812
 Germany,Technical Equipment & Human Resources,German Federal Police,2021/128,Field Deployment Unit,8507828
 Germany,Technical Equipment & Human Resources,Federal Border Police Headquarters,2022/60,Deployment Management Division,8388748
@@ -403,19 +403,19 @@ Germany,European Centre for Returns,Federal Police Regional Office Koblenz,2020/
 Germany,FOA,Federal Police Central Office,2018/45,Return Support Unit,4095511
 Germany,Human Resources,Federal Border Police Headquarters,2022/166,Deployment Management Division,3807329.9
 Germany,European Centre for Returns,Federal Police Regional Office Koblenz,2020/32,European Centre for Returns,3559569.03
-Germany,Development and delivery of a pre- deployment training course for maritime Frontex operations for European coast guards,"School and Training Centre for Maritime Policing, German Federal Police",Smaller grants,Training Unit,60000
-Germany,European Centre for Returns,"Kreis Coesfeld, Zentrale Ausländerbehörde",Smaller grants,European Centre for Returns,1608
-Germany,European Centre for Returns,Ministerium der Justiz und für Migration Baden-Württemberg,Smaller grants,European Centre for Returns,1596
-Germany,European Centre for Returns,Regierungspräsidium Darmstadt,Smaller grants,European Centre for Returns,1836
-Germany,European Centre for Returns,Regierungspräsidium Kassel,Smaller grants,European Centre for Returns,1832
-Germany,European Centre for Returns,"Stadt Bielefeld, Zentrale Ausländerbehörde",Smaller grants,European Centre for Returns,1301
-Germany,Technical Equipment,Federal Border Police Headquarters,Smaller grants,Field Operations Unit,2272920
-Germany,Technical Equipment & Human Resources,Federal Police Regional Office Koblenz,Smaller grants,Field Deployment Unit,487951
-Germany,various,Federal Office for Migration and Refugees BAMF,Smaller grants,European Centre for Returns,659116.97
-Germany,various,Federal Police Central Office,Smaller grants,various,90597071.86
-Germany,various,Federal Police Regional Office,Smaller grants,various,39058.65
-Germany,various,Federal Police Regional Office Bad Bramstedt,Smaller grants,various,983301.2999999999
-Germany,various,German Federal Police,Smaller grants,various,4691348.85
+Germany,Development and delivery of a pre- deployment training course for maritime Frontex operations for European coast guards,"School and Training Centre for Maritime Policing, German Federal Police",Multiple smaller grants,Training Unit,60000
+Germany,European Centre for Returns,"Kreis Coesfeld, Zentrale Ausländerbehörde",Multiple smaller grants,European Centre for Returns,1608
+Germany,European Centre for Returns,Ministerium der Justiz und für Migration Baden-Württemberg,Multiple smaller grants,European Centre for Returns,1596
+Germany,European Centre for Returns,Regierungspräsidium Darmstadt,Multiple smaller grants,European Centre for Returns,1836
+Germany,European Centre for Returns,Regierungspräsidium Kassel,Multiple smaller grants,European Centre for Returns,1832
+Germany,European Centre for Returns,"Stadt Bielefeld, Zentrale Ausländerbehörde",Multiple smaller grants,European Centre for Returns,1301
+Germany,Technical Equipment,Federal Border Police Headquarters,Multiple smaller grants,Field Operations Unit,2272920
+Germany,Technical Equipment & Human Resources,Federal Police Regional Office Koblenz,Multiple smaller grants,Field Deployment Unit,487951
+Germany,various projects,Federal Office for Migration and Refugees BAMF,Multiple smaller grants,European Centre for Returns,659116.97
+Germany,various projects,Federal Police Central Office,Multiple smaller grants,various,90597071.86
+Germany,various projects,Federal Police Regional Office,Multiple smaller grants,various,39058.65
+Germany,various projects,Federal Police Regional Office Bad Bramstedt,Multiple smaller grants,various,983301.2999999999
+Germany,various projects,German Federal Police,Multiple smaller grants,various,4691348.85
 Greece,Human Resources,"Hellenic Police, Ministry of Public Order and Citizens' Protection",2018/52,Operational Response Division,3372288
 Greece,Poseidon,"Hellenic Police, Ministry of Public Order and Citizens' Protection",2017/1462,Sea Border Sector,3117392
 Greece,Poseidon,Hellenic Coast Guard,2016/666,Sea Border Sector,2714258
@@ -454,11 +454,11 @@ Greece,Poseidon,Hellenic Coast Guard,2009/466/,Sea Border Sector,1305880.5
 Greece,Technical Equipment,Hellenic Coast Guard,2019/44,Field Deployment Unit,1274989
 Greece,Technical Equipment,Hellenic Coast Guard,2019/171,Field Deployment Unit,1272661
 Greece,Technical Equipment,Hellenic Coast Guard,2018/378,Operational Response Division,1232835
-Greece,Return Operations,Ministry of Interior Greece,Smaller grants,Return Operations Sector,6680
-Greece,various,Hellenic Coast Guard,Smaller grants,various,28287675.66
-Greece,various,"Hellenic Police, Aliens Division",Smaller grants,various,1242592.8900000001
-Greece,various,"Hellenic Police, Ministry of Public Order and Citizens' Protection",Smaller grants,various,13447576.959999999
-Greece,various,Ministry of Mercantile Marine,Smaller grants,Sea Border Sector,1203793.92
+Greece,Return Operations,Ministry of Interior Greece,Multiple smaller grants,Return Operations Sector,6680
+Greece,various projects,Hellenic Coast Guard,Multiple smaller grants,various,28287675.66
+Greece,various projects,"Hellenic Police, Aliens Division",Multiple smaller grants,various,1242592.8900000001
+Greece,various projects,"Hellenic Police, Ministry of Public Order and Citizens' Protection",Multiple smaller grants,various,13447576.959999999
+Greece,various projects,Ministry of Mercantile Marine,Multiple smaller grants,Sea Border Sector,1203793.92
 Hungary,Technical Equipment & Human Resources,Hungarian National Police,2022/38,Deployment Management Division,2977410
 Hungary,Technical Equipment & Human Resources,Hungarian National Police,2021/59,Field Deployment Unit,2375809
 Hungary,Human Resources,Hungarian National Police,2022/248,Deployment Management Division,1243321.03
@@ -470,11 +470,11 @@ Hungary,Return Operations,Immigration and Asylum Office,2017/1683,Return Support
 Hungary,Return Operations,Immigration and Asylum Office,2018/95,Return Support Unit,191463
 Hungary,Technical Equipment,Hungarian National Police,2018/298,Operational Response Division,188567
 Hungary,Neptune,Hungarian National Police,2009/078/,Land Borders Sector,175050.31
-Hungary,various,Hungarian National Police,Smaller grants,various,3789531.63
-Hungary,various,Immigration and Asylum Office,Smaller grants,various,359411.88
-Hungary,various,Law Enforcement School of Szeged,Smaller grants,Training Unit,338691.88
-Hungary,various,National Directorate-General for Aliens Policing,Smaller grants,various,200575
-Hungary,various,Office of Immigration and Nationality,Smaller grants,various,563322.71
+Hungary,various projects,Hungarian National Police,Multiple smaller grants,various,3789531.63
+Hungary,various projects,Immigration and Asylum Office,Multiple smaller grants,various,359411.88
+Hungary,various projects,Law Enforcement School of Szeged,Multiple smaller grants,Training Unit,338691.88
+Hungary,various projects,National Directorate-General for Aliens Policing,Multiple smaller grants,various,200575
+Hungary,various projects,Office of Immigration and Nationality,Multiple smaller grants,various,563322.71
 Iceland,Technical Equipment,Icelandic Coast Guard,2021/277,Field Deployment Unit,1923252
 Iceland,Technical Equipment,Icelandic Coast Guard,2019/223,Field Deployment Unit,1723273
 Iceland,Technical Equipment,Icelandic Coast Guard,2022/315,Field Operations Unit,1603759
@@ -519,11 +519,11 @@ Iceland,Hera,Icelandic Coast Guard,2012/797,Sea Border Sector,548412.16
 Iceland,Hermes,Icelandic Coast Guard,2013/1011,Sea Border Sector,546488.03
 Iceland,Indalo,Icelandic Coast Guard,2013/466,Sea Border Sector,546014.74
 Iceland,Indalo,Icelandic Coast Guard,2013/735,Sea Border Sector,528653.67
-Iceland,Human Resources,Ministry of Justice Iceland,Smaller grants,Deployment Management Division,414828.07
-Iceland,various,Icelandic Coast Guard,Smaller grants,Sea Border Sector,2063421.46
-Iceland,various,National Police Commissioner,Smaller grants,various,5180336.11
-Iceland,various,Police department at Keflavík Airport,Smaller grants,Air Border Sector,26315.920000000002
-Iceland,various,Sudurnes Police District,Smaller grants,various,47521.18
+Iceland,Human Resources,Ministry of Justice Iceland,Multiple smaller grants,Deployment Management Division,414828.07
+Iceland,various projects,Icelandic Coast Guard,Multiple smaller grants,Sea Border Sector,2063421.46
+Iceland,various projects,National Police Commissioner,Multiple smaller grants,various,5180336.11
+Iceland,various projects,Police department at Keflavík Airport,Multiple smaller grants,Air Border Sector,26315.920000000002
+Iceland,various projects,Sudurnes Police District,Multiple smaller grants,various,47521.18
 Iraq,2022/CFP/POST/01,European Technology and Training Centre (NGO),2022/125,European Centre for Returns,1617200
 Ireland,Return Operations,Garda National Immigration Bureau,2010/731/,Return Operations Sector,401639.77
 Ireland,Return Operations,Garda National Immigration Bureau,2009/193/,Return Operations Sector,272359.2
@@ -550,8 +550,8 @@ Ireland,Attica,Garda National Immigration Bureau,2011/633/,Return Operations Sec
 Ireland,Hammer,Garda National Immigration Bureau,2008/381/,Air Border Sector,21572.7
 Ireland,Return Operations,Naturalisation and Immigration Service,2013/372,Return Operations Sector,21464.4
 Ireland,Return Operations,Garda National Immigration Bureau,2011/43/,Return Operations Sector,18017.36
-Ireland,various,Garda National Immigration Bureau,Smaller grants,various,90067.45
-Ireland,various,Naturalisation and Immigration Service,Smaller grants,various,21801.739999999998
+Ireland,various projects,Garda National Immigration Bureau,Multiple smaller grants,various,90067.45
+Ireland,various projects,Naturalisation and Immigration Service,Multiple smaller grants,various,21801.739999999998
 Italy,European Centre for Returns,Guardia Costiera,2022/204,European Centre for Returns,4241181
 Italy,2020/CFP/TRU/01,Guardia di Finanza,2020/264,Training Unit,3695630
 Italy,European Centre for Returns,Guardia Costiera,2022/336,European Centre for Returns,3364127
@@ -560,9 +560,9 @@ Italy,Nautilus,Guardia Costiera,2008/186/,Sea Border Sector,2763007.83
 Italy,Hera,Guardia Costiera,2008/193/,Sea Border Sector,2727259.24
 Italy,European Centre for Returns,Guardia Costiera,2021/26,European Centre for Returns,2685985
 Italy,European Centre for Returns,Guardia Costiera,2022/19,European Centre for Returns,2628853
-Italy,Trainings standing corps,Guardia di Finanza,Smaller grants,Training Unit,281354.66
-Italy,various,Guardia Costiera,Smaller grants,various,219141046.35
-Italy,various,Italian Ministry of Interior,Smaller grants,various,475047.76
+Italy,Trainings standing corps,Guardia di Finanza,Multiple smaller grants,Training Unit,281354.66
+Italy,various projects,Guardia Costiera,Multiple smaller grants,various,219141046.35
+Italy,various projects,Italian Ministry of Interior,Multiple smaller grants,various,475047.76
 Kosovo,Human Resources,General Directorate of Kosovo Police,2019/138,Field Deployment Unit,45735.01
 Kosovo,Human Resources,General Directorate of Kosovo Police,2019/117,Field Deployment Unit,20521.53
 Kosovo,Technical Equipment & Human Resources,General Directorate of Kosovo Police,2021/270,Field Deployment Unit,17803.73
@@ -590,7 +590,7 @@ Kosovo,Human Resources,General Directorate of Kosovo Police,2019/88,Field Deploy
 Kosovo,Human Resources,General Directorate of Kosovo Police,2018/351,Operational Response Division,5834.71
 Kosovo,Human Resources,General Directorate of Kosovo Police,2018/339,Operational Response Division,5479.47
 Kosovo,Human Resources,General Directorate of Kosovo Police,2018/317,Operational Response Division,3715.04
-Kosovo,Human Resources,General Directorate of Kosovo Police,Smaller grants,Operational Response Division,6115.049999999999
+Kosovo,Human Resources,General Directorate of Kosovo Police,Multiple smaller grants,Operational Response Division,6115.049999999999
 Latvia,Technical Equipment,State Border Guard,2021/232,Field Deployment Unit,1924915
 Latvia,Technical Equipment,State Border Guard,2018/70,Operational Response Division,1850649
 Latvia,Technical Equipment,State Border Guard,2022/220,Field Operations Unit,1629612
@@ -628,7 +628,7 @@ Latvia,Technical Equipment,State Border Guard,2019/198,Field Deployment Unit,842
 Latvia,Triton,State Border Guard,2016/832,Sea Border Sector,838306
 Latvia,Triton,State Border Guard,2016/475,Sea Border Sector,816316
 Latvia,Technical Equipment,State Border Guard,2021/229,Field Deployment Unit,735046
-Latvia,various,State Border Guard,Smaller grants,various,30395382.98
+Latvia,various projects,State Border Guard,Multiple smaller grants,various,30395382.98
 Lithuania,Human Resources,State Border Guard Service Lithuania,2019/64,Field Deployment Unit,2399289
 Lithuania,Technical Equipment & Human Resources,State Border Guard Service Lithuania,2020/98,Field Deployment Unit,1847817
 Lithuania,Human Resources,State Border Guard Service Lithuania,2018/60,Operational Response Division,1707327
@@ -655,8 +655,8 @@ Lithuania,Human Resources,State Border Guard Service Lithuania,2022/251,Deployme
 Lithuania,Human Resources,State Border Guard Service Lithuania,2021/257,Deployment Management Division,331933.6
 Lithuania,Technical Equipment,State Border Guard Service Lithuania,2019/226,Field Deployment Unit,303906.38
 Lithuania,Poseidon,State Border Guard Service Lithuania,2008/320/,Sea Border Sector,282123.58
-Lithuania,European Centre for Returns,"Migration Department, Ministry of Interior",Smaller grants,European Centre for Returns,203111
-Lithuania,various,State Border Guard Service Lithuania,Smaller grants,various,8637480.62
+Lithuania,European Centre for Returns,"Migration Department, Ministry of Interior",Multiple smaller grants,European Centre for Returns,203111
+Lithuania,various projects,State Border Guard Service Lithuania,Multiple smaller grants,various,8637480.62
 Luxembourg,Triton,Ministry of Internal Security,2017/694,Sea Border Sector,1610811
 Luxembourg,Technical Equipment,Ministry of Internal Security,2022/322,Field Operations Unit,1565333
 Luxembourg,Technical Equipment,Ministry of Internal Security,2021/357,Field Operations Unit,1564656
@@ -690,11 +690,11 @@ Luxembourg,Hera,Police Grand Ducale,2013/559,Sea Border Sector,499720.2
 Luxembourg,Poseidon,Police Grand Ducale,2010/518/,Sea Border Sector,489230
 Luxembourg,Hera,Police Grand Ducale,2012/498,Sea Border Sector,463677.8
 Luxembourg,Hermes,Police Grand Ducale,2011/280/,Sea Border Sector,440305.48
-Luxembourg,- RABIT ExcerciseThrace 2009,The Government of Grand Duchy of Luxembourg,Smaller grants,Public Regulated Service,98585.69
-Luxembourg,various,Ministry of Foreign Affairs,Smaller grants,various,764886.45
-Luxembourg,various,Ministry of Internal Security,Smaller grants,various,1089770
-Luxembourg,various,Ministry of Justice Luxembourg,Smaller grants,various,600054.57
-Luxembourg,various,Police Grand Ducale,Smaller grants,various,4113146.7
+Luxembourg,- RABIT ExcerciseThrace 2009,The Government of Grand Duchy of Luxembourg,Multiple smaller grants,Public Regulated Service,98585.69
+Luxembourg,various projects,Ministry of Foreign Affairs,Multiple smaller grants,various,764886.45
+Luxembourg,various projects,Ministry of Internal Security,Multiple smaller grants,various,1089770
+Luxembourg,various projects,Ministry of Justice Luxembourg,Multiple smaller grants,various,600054.57
+Luxembourg,various projects,Police Grand Ducale,Multiple smaller grants,various,4113146.7
 Malta,Nautilus,Armed Forces of Malta,2008/142/,Sea Border Sector,1133424.75
 Malta,Nautilus,Armed Forces of Malta,2009/177/,Sea Border Sector,922389.33
 Malta,Technical Equipment & Human Resources,Armed Forces of Malta,2022/86,Deployment Management Division,637381
@@ -736,8 +736,8 @@ Malta,FOA,Armed Forces of Malta,2016/791,Land Borders Sector,174888
 Malta,Technical Equipment & Human Resources,Armed Forces of Malta,2021/107,Frontex Situation Centre,172639
 Malta,Indalo,Armed Forces of Malta,2012/798,Sea Border Sector,167600.74
 Malta,Poseidon,Armed Forces of Malta,2009/469/,Sea Border Sector,159277
-Malta,various,Armed Forces of Malta,Smaller grants,various,1519722.67
-Malta,various,Malta Police Force,Smaller grants,various,550864.2
+Malta,various projects,Armed Forces of Malta,Multiple smaller grants,various,1519722.67
+Malta,various projects,Malta Police Force,Multiple smaller grants,various,550864.2
 Moldova,Operations Moldova 2022,Border Police,2022/141,Deployment Management Division,346315.2
 Moldova,Macedonia 2022,Border Police,2022/274,Deployment Management Division,138285
 Moldova,Operations Moldova 2022,Border Police,2022/327,Deployment Management Division,113400
@@ -755,7 +755,7 @@ Moldova,Operational Activities LAND (MOA - LAND) and Multipurpose Operational Ac
 Moldova,Focal Points,Border Police,2017/1145,Land Borders Sector,17369
 Moldova,Human Resources,Border Police,2018/217,Operational Response Division,15445.02
 Moldova,Operations Moldova 2022,Border Police,2022/356,Deployment Management Division,14877.28
-Moldova,various,Border Police,Smaller grants,various,349879.08
+Moldova,various projects,Border Police,Multiple smaller grants,various,349879.08
 Montenegro,Operational Activities in Montenegro 2021,Police Directorate,2021/72,Field Deployment Unit,30400.84
 Montenegro,FOA,Police Directorate,2021/338,Deployment Management Division,19073.82
 Montenegro,Operational Activities in Montenegro 2022,Police Directorate,2022/228,Deployment Management Division,17665.7
@@ -788,8 +788,8 @@ Montenegro,Human Resources,Police Directorate,2020/278,Field Deployment Unit,659
 Montenegro,Minerva,Police Directorate,2012/564,Sea Border Sector,5554
 Montenegro,Focal Points,Ministry of Internal Affairs Montenegro,2016/672,Land Borders Sector,5064
 Montenegro,Neptune,Police Directorate,2012/135,Land Borders Sector,4050.2
-Montenegro,Alexis,Ministry of Internal Affairs Montenegro,Smaller grants,Air Border Sector,667
-Montenegro,various,Police Directorate,Smaller grants,various,8014.3
+Montenegro,Alexis,Ministry of Internal Affairs Montenegro,Multiple smaller grants,Air Border Sector,667
+Montenegro,various projects,Police Directorate,Multiple smaller grants,various,8014.3
 Netherlands,Human Resources,Immigration and Naturalisation Service,2019/30,Field Deployment Unit,11100000
 Netherlands,Human Resources,Immigration and Naturalisation Service,2018/58,Operational Response Division,6350000
 Netherlands,Human Resources,Immigration and Naturalisation Service,2020/45,Field Deployment Unit,5000000
@@ -806,13 +806,13 @@ Netherlands,Human Resources,Royal Marechaussee,2022/160,Deployment Management Di
 Netherlands,Poseidon,Royal Marechaussee,2016/18,Sea Border Sector,917795
 Netherlands,Human Resources,Royal Marechaussee,2018/73,Operational Response Division,910000
 Netherlands,Poseidon,Royal Marechaussee,2016/341,Sea Border Sector,908300
-Netherlands,Focal Points,NA,Smaller grants,Air Border Sector,23765.54
-Netherlands,Return Operations,Ministry of Justice Netherlands,Smaller grants,Return Operations Sector,161124.69
-Netherlands,Technical Equipment & Human Resources,Sea Port Police,Smaller grants,Frontex Situation Centre,10130
-Netherlands,Technical Equipment & Human Resources,"Transport and Support Service, Ministry for Security and Justice",Smaller grants,various,484997
-Netherlands,various,Immigration and Naturalisation Service,Smaller grants,various,15753492.17
-Netherlands,various,Repatriation and Departure Service,Smaller grants,various,7364814.86
-Netherlands,various,Royal Marechaussee,Smaller grants,various,24290479.59
+Netherlands,Focal Points,NA,Multiple smaller grants,Air Border Sector,23765.54
+Netherlands,Return Operations,Ministry of Justice Netherlands,Multiple smaller grants,Return Operations Sector,161124.69
+Netherlands,Technical Equipment & Human Resources,Sea Port Police,Multiple smaller grants,Frontex Situation Centre,10130
+Netherlands,Technical Equipment & Human Resources,"Transport and Support Service, Ministry for Security and Justice",Multiple smaller grants,various,484997
+Netherlands,various projects,Immigration and Naturalisation Service,Multiple smaller grants,various,15753492.17
+Netherlands,various projects,Repatriation and Departure Service,Multiple smaller grants,various,7364814.86
+Netherlands,various projects,Royal Marechaussee,Multiple smaller grants,various,24290479.59
 Nigeria,Triton,Immigration Service,2016/811,Sea Border Sector,9075
 Nigeria,Focal Points,Immigration Service,2016/1521,Air Border Sector,6274
 Nigeria,Focal Points,Immigration Service,2015/751,Air Border Sector,5425
@@ -853,7 +853,7 @@ North Macedonia,Focal Points,Ministry of Internal Affairs Macedonia,2015/766,Air
 North Macedonia,Focal Points,Ministry of Internal Affairs Macedonia,2013/814,Air Border Sector,4702.12
 North Macedonia,Alexis,Ministry of Internal Affairs Macedonia,2017/495,Air Border Sector,4351
 North Macedonia,Alexis,Ministry of Internal Affairs Macedonia,2017/1497,Air Border Sector,4339
-North Macedonia,various,Ministry of Internal Affairs Macedonia,Smaller grants,various,20561.5
+North Macedonia,various projects,Ministry of Internal Affairs Macedonia,Multiple smaller grants,various,20561.5
 Norway,Triton,National Police Directorate,2016/60,Sea Border Sector,2471748
 Norway,Triton,National Police Directorate,2017/1386,Sea Border Sector,2470356
 Norway,Triton,National Police Directorate,2017/26,Sea Border Sector,2466481
@@ -876,8 +876,8 @@ Norway,Poseidon,National Police Directorate,2016/1412,Sea Border Sector,484727
 Norway,Human Resources,National Police Directorate,2018/9,Operational Response Division,464962
 Norway,Human Resources,National Police Directorate,2022/162,Deployment Management Division,444964
 Norway,European Centre for Returns,National Police Immigration Service,2022/273,European Centre for Returns,444840
-Norway,various,National Police Directorate,Smaller grants,various,7753319.14
-Norway,various,National Police Immigration Service,Smaller grants,various,6189538.34
+Norway,various projects,National Police Directorate,Multiple smaller grants,various,7753319.14
+Norway,various projects,National Police Immigration Service,Multiple smaller grants,various,6189538.34
 Pakistan,2022/CFP/POST/01,"Women Empowerment Literacy & Development Organisation, Non-profit Organisation",2022/127,European Centre for Returns,303960
 Poland,Human Resources,Border Guard,2019/23,Field Deployment Unit,3478095.46
 Poland,Technical Equipment & Human Resources,Border Guard,2021/28,Field Deployment Unit,3392772
@@ -893,7 +893,7 @@ Poland,Human Resources,Border Guard,2021/258,Deployment Management Division,7799
 Poland,Poseidon,Border Guard,2016/12,Sea Border Sector,637924
 Poland,Poseidon,Border Guard,2016/961,Sea Border Sector,507727
 Poland,Poseidon,Border Guard,2010/260/,Sea Border Sector,471836.42
-Poland,various,Border Guard,Smaller grants,various,19942018.33
+Poland,various projects,Border Guard,Multiple smaller grants,various,19942018.33
 Portugal,Trainings standing corps,National Maritime Authority,2022/208,Training Unit,3263994.71
 Portugal,Technical Equipment,Portugese Air Force,2022/312,Field Operations Unit,2892242
 Portugal,Technical Equipment,Portugese Air Force,2018/148,Operational Response Division,2804179
@@ -910,13 +910,13 @@ Portugal,Technical Equipment,Portugese Air Force,2019/325,Field Deployment Unit,
 Portugal,Poseidon,Foreigners and Borders Service,2011/197/,Sea Border Sector,1233939.19
 Portugal,Human Resources,Guarda Nacional Republicana,2018/61,Operational Response Division,1224482.8
 Portugal,Triton,Foreigners and Borders Service,2016/538,Sea Border Sector,1217604
-Portugal,AZUL 2022,Maritime Analysis and Operations Centre (Narcotics) – MAOC(N),Smaller grants,Law Enforcement Sector,48096.2
-Portugal,various,Foreigners and Borders Service,Smaller grants,various,41350391.73
-Portugal,various,Guarda Nacional Republicana,Smaller grants,various,7859160.38
-Portugal,various,Maritime Police,Smaller grants,various,9358132.95
-Portugal,various,National Maritime Authority,Smaller grants,various,3074584
-Portugal,various,Portugese Air Force,Smaller grants,various,271736
-Portugal,various,Portugese Navy,Smaller grants,various,3704949.93
+Portugal,AZUL 2022,Maritime Analysis and Operations Centre (Narcotics) – MAOC(N),Multiple smaller grants,Law Enforcement Sector,48096.2
+Portugal,various projects,Foreigners and Borders Service,Multiple smaller grants,various,41350391.73
+Portugal,various projects,Guarda Nacional Republicana,Multiple smaller grants,various,7859160.38
+Portugal,various projects,Maritime Police,Multiple smaller grants,various,9358132.95
+Portugal,various projects,National Maritime Authority,Multiple smaller grants,various,3074584
+Portugal,various projects,Portugese Air Force,Multiple smaller grants,various,271736
+Portugal,various projects,Portugese Navy,Multiple smaller grants,various,3704949.93
 Romania,Technical Equipment & Human Resources,Romanian Border Police / Coast Guard,2022/28,Deployment Management Division,4187706
 Romania,Technical Equipment & Human Resources,Romanian Border Police / Coast Guard,2021/96,Field Deployment Unit,3221611
 Romania,Technical Equipment & Human Resources,Romanian Border Police / Coast Guard,2020/99,Field Deployment Unit,2941595
@@ -938,13 +938,13 @@ Romania,Technical Equipment,Romanian Border Police / Coast Guard,2018/152,Operat
 Romania,Technical Equipment,Romanian Border Police / Coast Guard,2019/121a,Field Deployment Unit,675037
 Romania,Technical Equipment & Human Resources,Romanian Border Police / Coast Guard,2022/80,Deployment Management Division,661411
 Romania,Human Resources,Romanian Border Police / Coast Guard,2021/164,Task Force Deployment Management,632700.51
-Romania,Course on application of coercive measures in carrying out specific missions related to the state border control,School for Improvement of Training of Border Police,Smaller grants,Training Unit,59932.84
-Romania,various,General Inspectorate for Immigration,Smaller grants,various,766221
-Romania,various,General Inspectorate of Aviation,Smaller grants,various,2468912.2600000002
-Romania,various,Romanian Border Police / Coast Guard,Smaller grants,various,27605158.02
-Romania,various,Romanian Office for Immigration,Smaller grants,various,329322.48
-Romania,various,Romanian Police,Smaller grants,various,1070824.42
-Romania,various,School for Training of Border Police,Smaller grants,Training Unit,158422.3
+Romania,Course on application of coercive measures in carrying out specific missions related to the state border control,School for Improvement of Training of Border Police,Multiple smaller grants,Training Unit,59932.84
+Romania,various projects,General Inspectorate for Immigration,Multiple smaller grants,various,766221
+Romania,various projects,General Inspectorate of Aviation,Multiple smaller grants,various,2468912.2600000002
+Romania,various projects,Romanian Border Police / Coast Guard,Multiple smaller grants,various,27605158.02
+Romania,various projects,Romanian Office for Immigration,Multiple smaller grants,various,329322.48
+Romania,various projects,Romanian Police,Multiple smaller grants,various,1070824.42
+Romania,various projects,School for Training of Border Police,Multiple smaller grants,Training Unit,158422.3
 Serbia,Operation Serbia Land 2021,Ministry of Internal Affairs,2021/366,Deployment Management Division,170536.8
 Serbia,Focal Points,Ministry of Internal Affairs,2011/1113/,Land Borders Sector,111888.9
 Serbia,Operation Serbia Land 2021,Ministry of Internal Affairs,2021/365,Deployment Management Division,86688
@@ -962,7 +962,7 @@ Serbia,Hubble,Ministry of Internal Affairs,2011/319/,Air Border Sector,22697.06
 Serbia,Neptune,Ministry of Internal Affairs,2010/140/,Land Borders Sector,20491.57
 Serbia,Neptune,Ministry of Internal Affairs,2010/512/,Land Borders Sector,20491.57
 Serbia,Flexible Operational Activities,Ministry of Internal Affairs,2015/856,Land Borders Sector,18952
-Serbia,various,Ministry of Internal Affairs,Smaller grants,various,586817.56
+Serbia,various projects,Ministry of Internal Affairs,Multiple smaller grants,various,586817.56
 Slovakia,Human Resources,Bureau of Border and Alien Police,2018/51,Operational Response Division,920000
 Slovakia,Technical Equipment & Human Resources,Police Force,2022/46,Deployment Management Division,862051
 Slovakia,Technical Equipment & Human Resources,Slovak Ministry of Interior,2020/87,Field Deployment Unit,656344
@@ -980,14 +980,14 @@ Slovakia,Poseidon,Bureau of Border and Alien Police,2016/137,Sea Border Sector,1
 Slovakia,Poseidon,Bureau of Border and Alien Police,2015/699,Sea Border Sector,114074
 Slovakia,Technical Equipment,Police Force,2022/289,Field Operations Unit,111657
 Slovakia,Focal Points,Bureau of Border and Alien Police,2009/467/,Land Borders Sector,105630.23
-Slovakia,Atlas I,Ministry of Interior Economical Section,Smaller grants,Land Borders Sector,8746.94
-Slovakia,Return Operations,Police Detention Centre for Foreigners,Smaller grants,Return Support Unit,10636
-Slovakia,various,Border and Alien Police Directorate,Smaller grants,various,320959.76
-Slovakia,various,Border and Alien Police Directorate Presov,Smaller grants,various,99864.99
-Slovakia,various,Bureau of Border and Alien Police,Smaller grants,various,3394655.28
-Slovakia,various,Ministry of Interior Slovakia,Smaller grants,various,13124.51
-Slovakia,various,Police Force,Smaller grants,various,237212
-Slovakia,various,Slovak Ministry of Interior,Smaller grants,various,231589
+Slovakia,Atlas I,Ministry of Interior Economical Section,Multiple smaller grants,Land Borders Sector,8746.94
+Slovakia,Return Operations,Police Detention Centre for Foreigners,Multiple smaller grants,Return Support Unit,10636
+Slovakia,various projects,Border and Alien Police Directorate,Multiple smaller grants,various,320959.76
+Slovakia,various projects,Border and Alien Police Directorate Presov,Multiple smaller grants,various,99864.99
+Slovakia,various projects,Bureau of Border and Alien Police,Multiple smaller grants,various,3394655.28
+Slovakia,various projects,Ministry of Interior Slovakia,Multiple smaller grants,various,13124.51
+Slovakia,various projects,Police Force,Multiple smaller grants,various,237212
+Slovakia,various projects,Slovak Ministry of Interior,Multiple smaller grants,various,231589
 Slovenia,Technical Equipment & Human Resources,Police,2022/73,Deployment Management Division,991149
 Slovenia,Technical Equipment & Human Resources,Police,2021/97,Field Deployment Unit,705471
 Slovenia,Technical Equipment & Human Resources,Police,2020/24,Field Deployment Unit,519485
@@ -1001,8 +1001,8 @@ Slovenia,Support Cat.2,Police,2020/304,Task Force Deployment Management,336048
 Slovenia,Human Resources,Slovenian Ministry of Interior,2021/312,Deployment Management Division,297332.24
 Slovenia,FOA,Police,2016/1214,Land Borders Sector,254006
 Slovenia,Neptune,Slovenian Ministry of Interior,2009/086/,Land Borders Sector,88017.41
-Slovenia,various,Police,Smaller grants,various,941950
-Slovenia,various,Slovenian Ministry of Interior,Smaller grants,various,1781479.73
+Slovenia,various projects,Police,Multiple smaller grants,various,941950
+Slovenia,various projects,Slovenian Ministry of Interior,Multiple smaller grants,various,1781479.73
 Spain,Trainings standing corps,National Police School,2022/5,Training Unit,6877162
 Spain,Hera,Ministry of Interior Spain,2008/189/,Sea Border Sector,4258729.76
 Spain,Trainings standing corps,National Police School,2021/231,Training Unit,3677600
@@ -1013,16 +1013,16 @@ Spain,Hera,Direccion General de la Policia y de la Guardia Civil,2008/374/,Sea B
 Spain,Human Resources,General Directorate for International Relations and Immigration,2022/186,Deployment Management Division,1831757.2
 Spain,Technical Equipment,Jefatura Fiscal y de Fronteras,2018/353,Operational Response Division,1714720
 Spain,Technical Equipment & Human Resources,Comisaría General de Extranjería y Fronteras,2021/36,Field Deployment Unit,1590739
-Spain,Human Resources,General Directorate for International Relations and Immigration,Smaller grants,various,2951901.37
-Spain,various,Comisaría General de Extranjería y Fronteras,Smaller grants,various,30396623.15
-Spain,various,Cuerpo Nacional de Policia,Smaller grants,various,12927302.92
-Spain,various,Direccion General de la Policia,Smaller grants,various,2359495.5
-Spain,various,Direccion General de la Policia y de la Guardia Civil,Smaller grants,various,6611498.66
-Spain,various,Guardia Civil,Smaller grants,various,26900780.12
-Spain,various,Jefatura Fiscal y de Fronteras,Smaller grants,various,38717038.19
-Spain,various,Ministry of Interior Spain,Smaller grants,various,411136.49000000005
-Spain,various,National Police School,Smaller grants,various,1572963.23
-Spain,various,Spanish Ministry of Interior,Smaller grants,various,1271773.15
+Spain,Human Resources,General Directorate for International Relations and Immigration,Multiple smaller grants,various,2951901.37
+Spain,various projects,Comisaría General de Extranjería y Fronteras,Multiple smaller grants,various,30396623.15
+Spain,various projects,Cuerpo Nacional de Policia,Multiple smaller grants,various,12927302.92
+Spain,various projects,Direccion General de la Policia,Multiple smaller grants,various,2359495.5
+Spain,various projects,Direccion General de la Policia y de la Guardia Civil,Multiple smaller grants,various,6611498.66
+Spain,various projects,Guardia Civil,Multiple smaller grants,various,26900780.12
+Spain,various projects,Jefatura Fiscal y de Fronteras,Multiple smaller grants,various,38717038.19
+Spain,various projects,Ministry of Interior Spain,Multiple smaller grants,various,411136.49000000005
+Spain,various projects,National Police School,Multiple smaller grants,various,1572963.23
+Spain,various projects,Spanish Ministry of Interior,Multiple smaller grants,various,1271773.15
 Sweden,Triton,Swedish Coast Guard,2017/752,Sea Border Sector,3313526
 Sweden,Triton,National Operations Department,2015/463,Sea Border Sector,2156227
 Sweden,European Centre for Returns,Swedish Police Authority,2021/20,European Centre for Returns,2070377
@@ -1058,12 +1058,12 @@ Sweden,Technical Equipment & Human Resources,Swedish Police Authority,2020/136,F
 Sweden,Poseidon,National Operations Department,2015/997,Sea Border Sector,625821
 Sweden,Human Resources,Swedish Police Authority,2019/21,Field Deployment Unit,612835
 Sweden,Triton,National Operations Department,2016/324,Sea Border Sector,609851
-Sweden,various,National Bureau of Investigation,Smaller grants,various,3178632.83
-Sweden,various,National Criminal Police,Smaller grants,various,2925155.7600000002
-Sweden,various,National Operations Department,Smaller grants,various,11672251.16
-Sweden,various,Swedish Coast Guard,Smaller grants,various,1262997.28
-Sweden,various,Swedish Migration Agency,Smaller grants,various,773743.66
-Sweden,various,Swedish Police Authority,Smaller grants,various,3595814.73
+Sweden,various projects,National Bureau of Investigation,Multiple smaller grants,various,3178632.83
+Sweden,various projects,National Criminal Police,Multiple smaller grants,various,2925155.7600000002
+Sweden,various projects,National Operations Department,Multiple smaller grants,various,11672251.16
+Sweden,various projects,Swedish Coast Guard,Multiple smaller grants,various,1262997.28
+Sweden,various projects,Swedish Migration Agency,Multiple smaller grants,various,773743.66
+Sweden,various projects,Swedish Police Authority,Multiple smaller grants,various,3595814.73
 Switzerland,Return Operations,Customs/Border Guard,2018/56,Return Support Unit,1042123
 Switzerland,Technical Equipment & Human Resources,Customs/Border Guard,2022/48,Deployment Management Division,791393
 Switzerland,FOA,State Secretariat for Migration,2019/150,European Centre for Returns,580132
@@ -1090,8 +1090,8 @@ Switzerland,Return Operations,Customs/Border Guard,2016/595,Return Support Unit,
 Switzerland,Return Operations,Customs/Border Guard,2016/766,Return Support Unit,154121
 Switzerland,European Centre for Returns,State Secretariat for Migration,2021/216,European Centre for Returns,150538
 Switzerland,Return Operations,Customs/Border Guard,2017/1432,Return Support Unit,141383
-Switzerland,various,Customs/Border Guard,Smaller grants,various,4236278.11
-Switzerland,various,State Secretariat for Migration,Smaller grants,various,457898.97
+Switzerland,various projects,Customs/Border Guard,Multiple smaller grants,various,4236278.11
+Switzerland,various projects,State Secretariat for Migration,Multiple smaller grants,various,457898.97
 Turkey,Eurocup,Turkish National Police,2008/144/,Land Borders Sector,83525.5
 Turkey,Focal Points,"Police, International Relations Department",2016/1318,Air Border Sector,24795
 Turkey,Eurocup,"Police, International Relations Department",2016/647,Air Border Sector,20259
@@ -1109,8 +1109,8 @@ Turkey,Focal Points,"Ministry of Interior, Border Management Department",2015/76
 Turkey,Focal Points,Turkish National Police,2015/764,Air Border Sector,6388
 Turkey,Hubble,Turkish National Police,2011/153/,Air Border Sector,5710.24
 Turkey,Human Resources,"Police, Border Gates Department",2018/154,Operational Response Division,5575.77
-Turkey,Focal Points,Turkish National Police,Smaller grants,Air Border Sector,402
-Turkey,Hermes,Ministry of Interior Turkey,Smaller grants,Sea Border Sector,1597
+Turkey,Focal Points,Turkish National Police,Multiple smaller grants,Air Border Sector,402
+Turkey,Hermes,Ministry of Interior Turkey,Multiple smaller grants,Sea Border Sector,1597
 Ukraine,Operational Activities AIR (MOA - AIR),State Border Guard Service Ukraine,2021/291,Field Deployment Unit,74473.07
 Ukraine,Focal Points,State Border Guard Service Ukraine,2017/1190,Land Borders Sector,56863
 Ukraine,Operational Activities LAND (MOA - LAND) and Multipurpose Operational Activities AIR (MOA - AIR),State Border Guard Service Ukraine,2021/172,Field Deployment Unit,54899.56
@@ -1139,7 +1139,7 @@ Ukraine,Jupiter,State Border Guard Service Ukraine,2010/654/,Land Borders Sector
 Ukraine,Human Resources,State Border Guard Service Ukraine,2018/287,Operational Response Division,15794.27
 Ukraine,FOA,State Border Guard Service Ukraine,2017/690,Land Borders Sector,13442
 Ukraine,Minerva,State Border Guard Service Ukraine,2012/545,Sea Border Sector,13048.18
-Ukraine,various,State Border Guard Service Ukraine,Smaller grants,various,369572.12
+Ukraine,various projects,State Border Guard Service Ukraine,Multiple smaller grants,various,369572.12
 United Kingdom,Return Operations,Border Agency,2010/14/,Return Operations Sector,371235
 United Kingdom,Return Operations,Border Agency,2010/714/,Return Operations Sector,339552.48
 United Kingdom,Return Operations,Border Agency,2011/81/,Return Operations Sector,319570.4
@@ -1169,6 +1169,6 @@ United Kingdom,FOA,Border Force,2015/1048,Return Operations Sector,40647
 United Kingdom,Attica,Border Force,2013/165,Return Operations Sector,38868.82
 United Kingdom,Nautilus,Border Agency,2008/146/,Sea Border Sector,38737.5
 United Kingdom,Poseidon,Border Force,2013/425,Sea Border Sector,37501
-United Kingdom,various,Border Agency,Smaller grants,various,634103.84
-United Kingdom,various,Border Force,Smaller grants,various,404601.17
-United Kingdom,various,"Home office, Immigration and Nationality Directorate",Smaller grants,Air Border Sector,25498.79
+United Kingdom,various projects,Border Agency,Multiple smaller grants,various,634103.84
+United Kingdom,various projects,Border Force,Multiple smaller grants,various,404601.17
+United Kingdom,various projects,"Home office, Immigration and Nationality Directorate",Multiple smaller grants,Air Border Sector,25498.79
