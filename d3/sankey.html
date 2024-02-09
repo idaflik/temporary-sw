@@ -64,7 +64,7 @@ var color = d3.scale.category20();
 
 var sankey = d3.sankey()
 .nodeWidth(2)
-.nodePadding(15)
+.nodePadding(10)
 .size([width, height]);
 
 var path  = sankey.link();
@@ -135,7 +135,8 @@ filteredData.forEach(function (d) {
   graph.nodes.push({ "name": d.beneficiary });
   graph.links.push({ "source": d.country,
     "target": d.beneficiary,
-    "value": +d.eur,
+    "value": +d.display_width,
+    "real_value": +d.eur,
     "grant_no": d.grant_no,
     "unit_sector": d.unit_sector_long,
     "desc_clean": d.project_clean
@@ -180,7 +181,7 @@ sankey
     // .filter(function(d) { return d.dy > 0 })
      .attr("class", "link")
      .attr("d", path)
-     .style("stroke-width", function(d) { return (Math.max(4, d.dy) - 1); })   // for some reason dy is negative in this case
+     .style("stroke-width", function(d) { return (Math.max(2, d.dy) - 1); })   // for some reason dy is negative in this case
      .style("stroke", function (d) {
       return countryColorScale(d.source.name);
     })
@@ -195,7 +196,7 @@ sankey
        .style("display", "inline-block")
        .html(
        "Year/Grant No: " + d.grant_no + "<br>"+
-        "<strong>" + d3.format("$.2s")(d.value).replace('$', '€')  + "</strong>"+ "<br>"+
+        "<strong>" + d3.format("$.2s")(d.real_value).replace('$', '€')  + "</strong>"+ "<br>"+
         "for " +d.desc_clean + "<br>"+
           "Sector: " + d.unit_sector );
 

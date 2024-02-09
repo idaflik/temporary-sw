@@ -24,7 +24,8 @@ needs(tidyverse,
       # ggsankey,
       networkD3,
       readxl,
-      ggplot2)
+      ggplot2,
+      scales)
 
 sheetnames <- excel_sheets("Grants_2008_2022.xlsx")
 
@@ -324,7 +325,8 @@ sankey_grants <- alldata_sorted %>%
   group_by(country,project_clean, beneficiary,max_year, grant_no, unit_sector_long)%>%
   summarize(eur = sum(eur, na.rm=T))%>%
   ungroup()%>%
-  mutate(display_width = if_else(eur >= 0.01 * max_year, eur, 0.01 * max_year))%>%
+  mutate(min_year = 0.02 * max_year)%>%
+  mutate(display_width = ((eur  * (max_year - min_year)) / max_year) + min_year)%>%
   group_by(country) %>%
   mutate(rank = if_else(grant_no == "Multiple smaller grants", 10000, rank(desc(eur)))) %>%
   arrange(country, rank) %>%
