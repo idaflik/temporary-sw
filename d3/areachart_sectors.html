@@ -25,7 +25,7 @@
     .legend-item {
       display: flex;
       align-items: center;
-      width: 80px;
+      width: 250px;
       margin-bottom: 5px; /* Add margin at the bottom of each legend item */
       margin-right: 5px; /* Horizontal spacing between legend items */
     }
@@ -82,7 +82,7 @@
       var svg = d3.select("#chart"),
         margin = { top: 20, left: 60, bottom: 0, right: 15 },
         width = window.innerWidth - margin.left - margin.right,
-        height = window.innerHeight - margin.top - margin.bottom - 150;
+        height = window.innerHeight - margin.top - margin.bottom - 250;
       // -100 height to leave space for the selector within iframe
 
       svg.attr("width", width + margin.left) // margin.right should stay empty

@@ -1,5 +1,5 @@
 grant_no,unit_sector,beneficiary,address,project,eur,year,country,project_clean,unit_sector_long
-2022/15,ECRET,Foreigners and Borders Service,"Avenida do Casal de Cabanas,  Urbanização Cabanas Golfe, nº 1, 2734-506 Barcarena, Portugal",2022/ECRET/01,14331,2022,Portugal,European Centre for Returns,NA
+2022/15,ECRET,Foreigners and Borders Service,"Avenida do Casal de Cabanas,  Urbanização Cabanas Golfe, nº 1, 2734-506 Barcarena, Portugal",2022/ECRET/01,14331,2022,Portugal,European Centre for Returns,European Centre for Returns
 2022/36,DMD,Guarda Nacional Republicana,"Largo do Carmo, 1200-092 Lisboa, Portugal",2022/DMD/01 Human resources and Light technical equipment,615739,2022,Portugal,Technical Equipment & Human Resources,Deployment Management Division
 2022/51,FOU,Maritime Police,"Praca do Comercio, 1100-148 Lisboa, Portugal",2022/FOU/01/Heavy Technical Equipment,481357,2022,Portugal,Technical Equipment,Field Operations Unit
 2022/58,DMD,Portugese Navy,"Rua do Arsenal
@@ -19,7 +19,7 @@ Rua do Arsenal
 Portugal
 ",2022/FOU/01/Heavy Technical Equipment,233031,2022,Portugal,Technical Equipment,Field Operations Unit
 2022/224,FOU,Maritime Police,"Praca do Comercio, 1100-148 Lisboa, Portugal",2022/FOU/01/Heavy Technical Equipment,322991,2022,Portugal,Technical Equipment,Field Operations Unit
-2022/270,ECRET,Foreigners and Borders Service,"Avenida do Casal de Cabanas,  Urbanização Cabanas Golfe, nº 1, 2734-506 Barcarena, Portugal",2022/ECRET/01,4968,2022,Portugal,European Centre for Returns,NA
+2022/270,ECRET,Foreigners and Borders Service,"Avenida do Casal de Cabanas,  Urbanização Cabanas Golfe, nº 1, 2734-506 Barcarena, Portugal",2022/ECRET/01,4968,2022,Portugal,European Centre for Returns,European Centre for Returns
 2022/285,FOU,Maritime Police,"Praca do Comercio, 1100-148 Lisboa, Portugal",2022/FOU/01/Heavy Technical Equipment,555205,2022,Portugal,Technical Equipment,Field Operations Unit
 2022/312,FOU,Portugese Air Force,"Avenida da Força Aérea n.º1, Alfragide 2614-506, Portugal",2022/FOU/01/Heavy Technical Equipment,2892242,2022,Portugal,Technical Equipment,Field Operations Unit
 2022/332,IFC,Guarda Nacional Republicana,"Largo do Carmo, 1200-092 Lisboa, Portugal",2022/Copernicus/EUROSUR Fusion Services (EFS),18044.74,2022,Portugal,Fusion Services (EFS),Information Fusion Centre
@@ -27,7 +27,7 @@ Portugal
 1149-001 Lisboa
 Portugal",2022/FOU/01/Heavy Technical Equipment,276687,2022,Portugal,Technical Equipment,Field Operations Unit
 2022/368,DMD,Foreigners and Borders Service,"Avenida do Casal de Cabanas,  Urbanização Cabanas Golfe, nº 1, 2734-506 Barcarena, Portugal","Support in the development of human resources to secure Member States’ contributions to the standing corps, in relation to category 3 of the standing corps",1746003.42,2022,Portugal,Human Resources,Deployment Management Division
-2021/16,ECRET,Foreigners and Borders Service,NA,2021/ECRet/01,12038,2021,Portugal,European Centre for Returns,NA
+2021/16,ECRET,Foreigners and Borders Service,NA,2021/ECRet/01,12038,2021,Portugal,European Centre for Returns,European Centre for Returns
 2021/45,FDU,Maritime Police,"Praca do Comercio, 1100-148 Lisboa, Portugal",2021/FDU/01 Human Resources and light technical equipment,387185,2021,Portugal,Technical Equipment & Human Resources,Field Deployment Unit
 2021/47,FDU,Portugese Navy,"Rua do Arsenal1149-001 LisboaPortugal",2021/FDU/01/Heavy Technical Equipment,177624,2021,Portugal,Technical Equipment,Field Deployment Unit
 2021/49,FDU,Maritime Police,"Praca do Comercio, 1100-148 Lisboa, Portugal",2021/FDU/01/Heavy Technical Equipment,261674,2021,Portugal,Technical Equipment,Field Deployment Unit
@@ -54,7 +54,7 @@ Portugal",2021/FSC/01 Human resources and Light  technical equipment,133856,2021
 2021/385,DMD,Portugese Navy,"Rua do Arsenal1149-001 LisboaPortugal",2021/FDU/01 Human Resources and light technical equipment,13876,2021,Portugal,Technical Equipment & Human Resources,Deployment Management Division
 2021/400,FOU,Guarda Nacional Republicana,"Largo do Carmo, 1200-092 Lisboa, Portugal",2021/FDU/01/Heavy Technical Equipment,215085,2021,Portugal,Technical Equipment,Field Operations Unit
 2021/414,FOU,Maritime Police,"Praca do Comercio, 1100-148 Lisboa, Portugal",2021/FDU/01/Heavy Technical Equipment,273585,2021,Portugal,Technical Equipment,Field Operations Unit
-2020/21,ECRET,Foreigners and Borders Service,"Avenida do Casal de Cabanas,  UrbanizaÃ§Ã£o Cabanas Golfe, no 1,2734-506 Barcarena",2020/ECRET/01 Return Support,14974.26,2020,Portugal,European Centre for Returns,NA
+2020/21,ECRET,Foreigners and Borders Service,"Avenida do Casal de Cabanas,  UrbanizaÃ§Ã£o Cabanas Golfe, no 1,2734-506 Barcarena",2020/ECRET/01 Return Support,14974.26,2020,Portugal,European Centre for Returns,European Centre for Returns
 2020/39,FDU,Maritime Police,"Praca do Comercio, 1100-148 Lisboa, Portugal",2020/FDU/01/Human Resources/Light Technical Technical Equipment,414508,2020,Portugal,Technical Equipment & Human Resources,Field Deployment Unit
 2020/54,FDU,Foreigners and Borders Service,"Avenida do Casal de Cabanas,  UrbanizaÃ§Ã£o Cabanas Golfe, no 1,2734-506 Barcarena",2020/FDU/01/Human Resources/SEF,217952,2020,Portugal,Human Resources,Field Deployment Unit
 2020/68,FDU,National Maritime Authority,"Av. AntÃ³nio Augusto de Aguiar, n.o 20 - 4.o Piso 1050-016Lisboa - Portual",2020/FDU/01/Human Resources/Light Technical Technical Equipment,773542,2020,Portugal,Technical Equipment & Human Resources,Field Deployment Unit
@@ -79,9 +79,9 @@ Portugal",2021/FSC/01 Human resources and Light  technical equipment,133856,2021
 2020/236,FDU,Portugese Air Force,"Avenida da ForÃ§a AÃ©rea n.o1, Alfragide 2614-506, Portugal",2020/FDU/01/Human Resources/Heavy Technical Technical Equipment,1627164,2020,Portugal,Technical Equipment & Human Resources,Field Deployment Unit
 2020/295,FDU,Maritime Police,"Praca do Comercio, 1100-148 Lisboa, Portugal",2020/FDU/01/Human Resources/Heavy Technical Technical Equipment,217497,2020,Portugal,Technical Equipment & Human Resources,Field Deployment Unit
 2020/297,FDU,Guarda Nacional Republicana,"Largo do Carmo, 1200-092 Lisboa",2020/FDU/01/Human Resources/Heavy Technical Technical Equipment,201323,2020,Portugal,Technical Equipment & Human Resources,Field Deployment Unit
-2020/332,ECRET,Foreigners and Borders Service,"Avenida do Casal de Cabanas,  UrbanizaÃ§Ã£o Cabanas Golfe, no 1,2734-506 Barcarena",2020/ECRet/01,75748.64,2020,Portugal,European Centre for Returns,NA
+2020/332,ECRET,Foreigners and Borders Service,"Avenida do Casal de Cabanas,  UrbanizaÃ§Ã£o Cabanas Golfe, no 1,2734-506 Barcarena",2020/ECRet/01,75748.64,2020,Portugal,European Centre for Returns,European Centre for Returns
 2020/334,FSC,Portugese Navy,"Rua do Arsenal1149-001 Lisboa",2020/FSC/GA FSC FIMO Deployment,22707,2020,Portugal,FIMO Deployment,Frontex Situation Centre
-2019/11,ECRET,Foreigners and Borders Service,"Avenida do Casal de Cabanas,  UrbanizaÃ§Ã£oCabanas Golfe, no 1, 2734-506 Barcarena",2019/ECRet/01-FOA-R 2019 including return and pre- return related activities,23356.76,2019,Portugal,FOA,NA
+2019/11,ECRET,Foreigners and Borders Service,"Avenida do Casal de Cabanas,  UrbanizaÃ§Ã£oCabanas Golfe, no 1, 2734-506 Barcarena",2019/ECRet/01-FOA-R 2019 including return and pre- return related activities,23356.76,2019,Portugal,FOA,European Centre for Returns
 2019/38,FDU,Portugese Air Force,"Avenida da ForÃ§a AÃ©rea n.o1, Alfragide 2614-506,Portugal",2019/FDU/01 Technical Equipment,2740699,2019,Portugal,Technical Equipment,Field Deployment Unit
 2019/50,FDU,Maritime Police,"Praca do Comercio, 1100-148 Lisboa, Portugal",2019/FDU/01 Technical Equipment,342554,2019,Portugal,Technical Equipment,Field Deployment Unit
 2019/60,FDU,Maritime Police,"Praca do Comercio, 1100-148 Lisboa, Portugal",2019/FDU/01 Human Resources,407381,2019,Portugal,Human Resources,Field Deployment Unit
@@ -99,7 +99,7 @@ Portugal",2021/FSC/01 Human resources and Light  technical equipment,133856,2021
 2019/176,FDU,Maritime Police,"Praca do Comercio, 1100-148 Lisboa, Portugal",2019/FDU/01 Technical Equipment,738777.37,2019,Portugal,Technical Equipment,Field Deployment Unit
 2019/193,FDU,Portugese Air Force,"Avenida da ForÃ§a AÃ©rea n.o1, Alfragide 2614-506,Portugal",2019/FDU/01 Technical Equipment,117084,2019,Portugal,Technical Equipment,Field Deployment Unit
 2019/195,RIU,Foreigners and Borders Service,"Avenida do Casal de Cabanas,  UrbanizaÃ§Ã£oCabanas Golfe, no 1, 2734-506 Barcarena",2019/RIU/01 Biometrics on the move,47055,2019,Portugal,Biometrics on the move,Research and Innovation Unit
-2019/236,ECRET,Foreigners and Borders Service,"Avenida do Casal de Cabanas,  UrbanizaÃ§Ã£oCabanas Golfe, no 1, 2734-506 Barcarena",2019/ECRet/01-FOA-R 2019 including return and pre- return related activities,13833.97,2019,Portugal,FOA,NA
+2019/236,ECRET,Foreigners and Borders Service,"Avenida do Casal de Cabanas,  UrbanizaÃ§Ã£oCabanas Golfe, no 1, 2734-506 Barcarena",2019/ECRet/01-FOA-R 2019 including return and pre- return related activities,13833.97,2019,Portugal,FOA,European Centre for Returns
 2019/241,FDU,Portugese Navy,"Rua do Arsenal1149-001 LisboaPortugal",2019/FDU/01 Technical Equipment,631647,2019,Portugal,Technical Equipment,Field Deployment Unit
 2019/246,FDU,Guarda Nacional Republicana,"Largo do Carmo, 1200-092 Lisboa",2019/FDU/01 Technical Equipment,191496,2019,Portugal,Technical Equipment,Field Deployment Unit
 2019/251,FDU,Guarda Nacional Republicana,"Largo do Carmo, 1200-092 Lisboa",2019/FDU/01 Technical Equipment,225709,2019,Portugal,Technical Equipment,Field Deployment Unit
@@ -126,9 +126,9 @@ Portugal",2021/FSC/01 Human resources and Light  technical equipment,133856,2021
 2018/170,ORD,Guarda Nacional Republicana,"Largo do Carmo, 1200-092 Lisboa",2018/ORD/01 Technical Equipment,499799,2018,Portugal,Technical Equipment,Operational Response Division
 2018/233,ORD,Guarda Nacional Republicana,"Largo do Carmo, 1200-092 Lisboa",2018/ORD/01 Technical Equipment,601513,2018,Portugal,Technical Equipment,Operational Response Division
 2018/234,ORD,Portugese Navy,"Rua do Arsenal1149-001 LisboaPortugal",2018/ORD/01 Technical Equipment,2066564,2018,Portugal,Technical Equipment,Operational Response Division
-2018/246,ECRET,Foreigners and Borders Service,"Avenida do Casal deCabanas,  UrbanizaÃ§Ã£oCabanas Golfe, no 1,2734-506 Barcarena","2018/ECRet/01-FOA- R 2018 including Return Specialist, Identification Missions",11505,2018,Portugal,FOA,NA
+2018/246,ECRET,Foreigners and Borders Service,"Avenida do Casal deCabanas,  UrbanizaÃ§Ã£oCabanas Golfe, no 1,2734-506 Barcarena","2018/ECRet/01-FOA- R 2018 including Return Specialist, Identification Missions",11505,2018,Portugal,FOA,European Centre for Returns
 2018/280,ORD,Maritime Police,"Praca do Comercio, 1100-148 Lisboa, Portugal",2018/ORD/01 Technical Equipment,432613,2018,Portugal,Technical Equipment,Operational Response Division
-2018/331,ECRET,Foreigners and Borders Service,"Avenida do Casal deCabanas,  UrbanizaÃ§Ã£oCabanas Golfe, no 1,2734-506 Barcarena","2018/ECRet/01-FOA- R 2018 including return operations, return interventions and return related activities",12071,2018,Portugal,FOA,NA
+2018/331,ECRET,Foreigners and Borders Service,"Avenida do Casal deCabanas,  UrbanizaÃ§Ã£oCabanas Golfe, no 1,2734-506 Barcarena","2018/ECRet/01-FOA- R 2018 including return operations, return interventions and return related activities",12071,2018,Portugal,FOA,European Centre for Returns
 2018/369,PRU,Guarda Nacional Republicana,"Largo do Carmo, 1200-092 Lisboa",2018/PRU/07 Rapid Border Intervention Exercise 2018,17302,2018,Portugal,Rapid Border Intervention Exercise 2018,Pooled Resources Unit
 2018/377,PRU,Foreigners and Borders Service,"Avenida do Casal deCabanas,  UrbanizaÃ§Ã£oCabanas Golfe, no 1,2734-506 Barcarena",2018/PRU/07 Rapid Border Intervention Exercise 2018,9050,2018,Portugal,Rapid Border Intervention Exercise 2018,Pooled Resources Unit
 2017/20,SBS,Foreigners and Borders Service,"Avenida do Casal de Cabanas,UrbanizaÃ§Ã£o Cabanas Golfe, no 1,2734-506 Barcarena",2017/SBS/07 JO Poseidon 2017,24428,2017,Portugal,Poseidon,Sea Border Sector
