@@ -336,7 +336,10 @@ sankey %>%
 countries_sectors_singles <- data_allyears_clean %>%
   select(country, unit_sector_long, eur, year)%>%
   group_by(year, country, unit_sector_long)%>%
-  summarize(eur = sum(eur, na.rm=T))
+  summarize(eur = sum(eur, na.rm=T))%>%
+  group_by(country)%>%
+  filter(n_distinct(year) > 1)%>%
+  ungroup()
 
 countries_sectors_agg <- countries_sectors_singles %>%
   group_by(year, unit_sector_long)%>%
@@ -425,7 +428,10 @@ countries_projects_singles <- data_allyears_clean %>%
   mutate(above_thres = if_else(max_project >= 0.02* max_year, T, F))%>%
   mutate(project_clean = if_else(above_thres == T, project_clean, "Other"))%>%
   group_by(year, country, project_clean)%>%
-  summarize(eur = sum(eur, na.rm=T))
+  summarize(eur = sum(eur, na.rm=T))%>%
+  group_by(country)%>%
+  filter(n_distinct(year) > 1)%>%
+  ungroup()
 
 countries_projects_agg <- countries_projects_singles %>%
   group_by(year, project_clean)%>%
