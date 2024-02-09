@@ -320,7 +320,7 @@ sankey_grants <- alldata_sorted %>%
   mutate(n_unit_sector = n_distinct(unit_sector_long))%>%
   mutate(unit_sector_long = if_else(n_unit_sector == 1, unit_sector_long, "various"))%>%
   mutate(n_projects = n_distinct(project_clean))%>%
-  mutate(project_clean = if_else(n_projects == 1, project_clean, "various"))%>%
+  mutate(project_clean = if_else(n_projects == 1, project_clean, "various projects"))%>%
   group_by(country,project_clean, beneficiary, grant_no, unit_sector_long)%>%
   summarize(eur = sum(eur, na.rm=T))%>%
   group_by(country) %>%
