@@ -425,7 +425,7 @@ countries_projects_singles <- data_allyears_clean %>%
   group_by(country, project_clean)%>%
   mutate(max_project = max(eur, na.rm=T))%>%
   ungroup()%>%
-  mutate(above_thres = if_else(max_project >= 0.02* max_year, T, F))%>%
+  mutate(above_thres = if_else(max_project >= 0.05 * max_year, T, F))%>%
   mutate(project_clean = if_else(above_thres == T, project_clean, "Other"))%>%
   group_by(year, country, project_clean)%>%
   summarize(eur = sum(eur, na.rm=T))%>%
@@ -444,7 +444,7 @@ countries_projects_agg <- countries_projects_singles %>%
   group_by(country, project_clean)%>%
   mutate(max_project = max(eur, na.rm=T))%>%
   ungroup()%>%
-  mutate(above_thres = if_else(max_project >= 0.02* max_year, T, F))%>%
+  mutate(above_thres = if_else(max_project >= 0.05 * max_year, T, F))%>%
   mutate(project_clean = if_else(above_thres == T, project_clean, "Other"))%>%
   group_by(year, country, project_clean)%>%
   summarize(eur = sum(eur, na.rm=T))
