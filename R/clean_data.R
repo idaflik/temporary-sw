@@ -334,21 +334,21 @@ sankey %>%
   filter(n > 1)
 
 countries_sectors_singles <- data_allyears_clean %>%
-  select(country, unit_sector, eur, year)%>%
-  group_by(year, country, unit_sector)%>%
+  select(country, unit_sector_long, eur, year)%>%
+  group_by(year, country, unit_sector_long)%>%
   summarize(eur = sum(eur, na.rm=T))
 
 countries_sectors_agg <- countries_sectors_singles %>%
-  group_by(year, unit_sector)%>%
+  group_by(year, unit_sector_long)%>%
   summarize(eur = sum(eur, na.rm = T),
             country = "all")
 
 countries_sectors <- bind_rows(countries_sectors_agg %>%
                                  ungroup()%>%
-                                 spread(key = unit_sector, value = eur),
+                                 spread(key = unit_sector_long, value = eur),
                                countries_sectors_singles %>%
                                  ungroup()%>%
-                                 spread(key = unit_sector, value = eur) %>%
+                                 spread(key = unit_sector_long, value = eur) %>%
                                  arrange(country))%>%
   mutate_all(~replace_na(.,0))%>%
   rename("n.a." = "<NA>")
