@@ -412,52 +412,46 @@ if (file.exists(fn)){
 write_sf(geo_grants %>% mutate(geometry = st_centroid(geometry)), 
          fn)
 
-ggplot()+
-  geom_col(
-    data_allyears_clean,
-    mapping = aes(x = year,
-                  y = eur,
-                  fill = desc_clean)
-  )+
-  theme(legend.position = "none")
-
 countries_projects_singles <- data_allyears_clean %>%
-  group_by(year, country, desc_clean)%>%
+  group_by(year, country, project_clean)%>%
+  summarize(eur = sum(eur, na.rm=T))%>%
+  group_by(country, year)%>%
+  mutate(total_year = sum(eur, na.rm=T))%>%
+  group_by(country)%>%
+  mutate(max_year = max(total_year))%>%
+  group_by(country, project_clean)%>%
+  mutate(max_project = max(eur, na.rm=T))%>%
+  ungroup()%>%
+  mutate(above_thres = if_else(max_project >= 0.02* max_year, T, F))%>%
+  mutate(project_clean = if_else(above_thres == T, project_clean, "Other"))%>%
+  group_by(year, country, project_clean)%>%
   summarize(eur = sum(eur, na.rm=T))
 
 countries_projects_agg <- countries_projects_singles %>%
-  group_by(year, desc_clean)%>%
+  group_by(year, project_clean)%>%
   summarize(eur = sum(eur, na.rm = T),
-            country = "all")
+            country = "all")%>%
+  group_by(country, year)%>%
+  mutate(total_year = sum(eur, na.rm=T))%>%
+  group_by(country)%>%
+  mutate(max_year = max(total_year))%>%
+  group_by(country, project_clean)%>%
+  mutate(max_project = max(eur, na.rm=T))%>%
+  ungroup()%>%
+  mutate(above_thres = if_else(max_project >= 0.02* max_year, T, F))%>%
+  mutate(project_clean = if_else(above_thres == T, project_clean, "Other"))%>%
+  group_by(year, country, project_clean)%>%
+  summarize(eur = sum(eur, na.rm=T))
 
 countries_projects <- bind_rows(countries_projects_agg %>%
                                   ungroup()%>%
-                                  spread(key = desc_clean, value = eur),
+                                  spread(key = project_clean, value = eur),
                                 countries_projects_singles %>%
                                   ungroup()%>%
-                                  spread(key = desc_clean, value = eur) %>%
+                                  spread(key = project_clean, value = eur) %>%
                                   arrange(country))%>%
   mutate_all(~replace_na(.,0))
 
 write_csv(countries_projects, "output/frontex_grants_countries_projects.csv")
 
-top_projects <- data_allyears_clean %>%
-  group_by(desc_clean)%>%
-  summarize(eur = sum(eur, na.rm=T))%>%
-  arrange(desc(eur))
-
-ggplot()+
-  geom_col(top_projects %>% head(50)%>%mutate(project = str_c(substr(project, 1, 30), row_number())),
-           mapping = aes(y = project,
-                         x = eur))
-
-ggplot()+
-  geom_col(top_projects %>%
-             mutate(desc_clean = substr(desc_clean, 1, 50))%>%
-             group_by(desc_clean)%>%
-             summarize(eur = sum(eur, na.rm=T))%>%
-             arrange(desc(eur))%>%
-             head(40),
-           mapping = aes(y = reorder(desc_clean, eur),
-                         x = eur))
 

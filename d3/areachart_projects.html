@@ -25,7 +25,7 @@
     .legend-item {
       display: flex;
       align-items: center;
-      width: 80px;
+      width: 250px;
       margin-bottom: 5px; /* Add margin at the bottom of each legend item */
       margin-right: 5px; /* Horizontal spacing between legend items */
     }
@@ -46,7 +46,7 @@
 
   <div class="tooltip" style="display: none;"></div>
 
-  <!-- <div id="legend" class="legend"></div> -->
+  <div id="legend" class="legend"></div>
 
   <script>
     var EUformat = d3.formatDefaultLocale({
@@ -82,7 +82,7 @@
       var svg = d3.select("#chart"),
         margin = { top: 20, left: 55, bottom: 0, right: 15 },
         width = window.innerWidth - margin.left - margin.right,
-        height = window.innerHeight - margin.top - margin.bottom - 150;
+        height = window.innerHeight - margin.top - margin.bottom - 250;
       // -100 height to leave space for the selector within iframe
 
       svg.attr("width", width + margin.left) // margin.right should stay empty
@@ -93,11 +93,11 @@
         .attr("class", "tooltip")
         .style("display", "none");
 
-      // var legend = d3.select("#legend");
+      var legend = d3.select("#legend");
 
-      // // Use the same margin for the legend as the graph
-      // legend.style("margin", `20px ${margin.right}px 0 ${margin.left}px`)
-      // .style("max-width", `${width}px`); 
+      // Use the same margin for the legend as the graph
+      legend.style("margin", `20px ${margin.right}px 0 ${margin.left}px`)
+      .style("max-width", `${width}px`); 
       
       var x = d3.scaleBand()
         .range([margin.left, width + margin.left])
@@ -290,43 +290,42 @@
           .attr("d", area)
           ;
           
+          var filteredKeys = keys.filter(function (key) {
+          return data.some(function (d) {
+            return d[key] > 0;
+          });
+        });
 
-        // var filteredKeys = keys.filter(function (key) {
-        //   return data.some(function (d) {
-        //     return d[key] > 0;
-        //   });
-        // });
+        var totalsByKey = {};
+        filteredKeys.forEach(function (key) {
+          var totalForKey = d3.sum(data, function (d) { return d[key]; });
+          totalsByKey[key] = totalForKey;
+        });
 
-        // var totalsByKey = {};
-        // filteredKeys.forEach(function (key) {
-        //   var totalForKey = d3.sum(data, function (d) { return d[key]; });
-        //   totalsByKey[key] = totalForKey;
-        // });
+        filteredKeys.sort(function (a, b) {
+          return totalsByKey[b] - totalsByKey[a];
+        });
 
-        // filteredKeys.sort(function (a, b) {
-        //   return totalsByKey[b] - totalsByKey[a];
-        // });
+        // Remove existing legend items
+        legend.selectAll(".legend-item").remove();
 
-        // // Remove existing legend items
-        // legend.selectAll(".legend-item").remove();
+        // Create legend items
+        var legendItems = legend.selectAll(".legend-item")
+          .data(filteredKeys)
+          .enter()
+          .append("div")
+          .attr("class", "legend-item");
 
-        // // Create legend items
-        // var legendItems = legend.selectAll(".legend-item")
-        //   .data(filteredKeys)
-        //   .enter()
-        //   .append("div")
-        //   .attr("class", "legend-item");
+        // Append color div
+        legendItems.append("div")
+          .attr("class", "legend-color")
+          .style("background-color", d => z(d));
 
-        // // Append color div
-        // legendItems.append("div")
-        //   .attr("class", "legend-color")
-        //   .style("background-color", d => z(d));
-
-        //   console.log(z("ABS"))
-        // // Append text
-        // legendItems.append("div")
-        //   .attr("class", "legend-text")
-        //   .text(d => d);
+          console.log(z("ABS"))
+        // Append text
+        legendItems.append("div")
+          .attr("class", "legend-text")
+          .text(d => d);
 
       }
 
