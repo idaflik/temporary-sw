@@ -250,6 +250,9 @@ data_allyears_clean <- data_allyears %>%
     is.na(beneficiary) ~ "unknown",
     T ~ beneficiary
   ),
+  unit_sector = if_else(grant_no == "2009/376a/", "SBS", unit_sector),
+  unit_sector = if_else(unit_sector == "lBS", "LBS", unit_sector),
+  unit_sector = if_else(unit_sector %in% c("ECRet","ECRET","Ecret"), "ECRET", unit_sector),
   beneficiary = if_else(beneficiary == "Ministry of Justice", glue("Ministry of Justice {country}"), beneficiary),
   beneficiary = if_else(beneficiary == "Ministry of Interior", glue("Ministry of Interior {country}"), beneficiary))%>%
   mutate(beneficiary = str_replace_all(beneficiary, ", Non-governmental organisation", " (NGO)"),
@@ -290,17 +293,23 @@ data_allyears_clean <- data_allyears %>%
       grepl("Technical Equipment", project_cat1) & grepl("heavy|Heavy", project) ~ "Heavy technical equipment",
       grepl("Technical Equipment", project_cat1) & grepl("light|Light", project) ~ "Light technical equipment"
     ))%>%
-  mutate(desc_clean = if_else(is.na(project_cat1), project_clean, project_cat1))
-
+  mutate(project_clean = if_else(is.na(project_cat1), project_clean, project_cat1))%>%
+  select(-project_cat1, -project_cat2)%>%
+  left_join(read_csv("abbreviations.txt")%>%select(-source))
 
 alldata_sorted <- data_allyears_clean %>%
   group_by(country) %>%
   mutate(rank = rank(desc(eur))) %>%
   arrange(country, rank) %>%
   ungroup() %>%
-  select( -rank )
+  select(-rank)
 
 write_csv(alldata_sorted, "output/frontex_grants_all_grants.csv")
+
+for(cur_country in unique(alldata_sorted$country)){
+  write_csv(alldata_sorted %>% filter(country == cur_country),
+            glue("output/frontex_grants_all_{cur_country}.csv"))
+}
 
 sankey_agg <- data_allyears_clean %>%
   group_by(country, beneficiary)%>%
@@ -353,7 +362,7 @@ countries <- ne_countries(returnclass = "sf", scale = "medium")%>%
       st_cast("POLYGON") %>%
       mutate(area = st_area(geometry))%>%
       filter(area == max(area))
-      # st_crop(c(xmin = -10, ymin = 40, xmax = 20, ymax = 55))
+    # st_crop(c(xmin = -10, ymin = 40, xmax = 20, ymax = 55))
   )
 
 background_countries <- countries %>%
@@ -365,7 +374,7 @@ if (file.exists(fn)){
 } 
 write_sf(background_countries,
          fn)
-  
+
 total_countries_years <- data_allyears_clean %>%
   group_by(country, year)%>%
   summarize(eur = sum(eur))%>%
@@ -422,12 +431,12 @@ countries_projects_agg <- countries_projects_singles %>%
             country = "all")
 
 countries_projects <- bind_rows(countries_projects_agg %>%
-                                 ungroup()%>%
-                                 spread(key = desc_clean, value = eur),
+                                  ungroup()%>%
+                                  spread(key = desc_clean, value = eur),
                                 countries_projects_singles %>%
-                                 ungroup()%>%
-                                 spread(key = desc_clean, value = eur) %>%
-                                 arrange(country))%>%
+                                  ungroup()%>%
+                                  spread(key = desc_clean, value = eur) %>%
+                                  arrange(country))%>%
   mutate_all(~replace_na(.,0))
 
 write_csv(countries_projects, "output/frontex_grants_countries_projects.csv")

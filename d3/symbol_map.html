@@ -11,11 +11,12 @@
 
 <body>
   <link href="stylesheet.css" rel="stylesheet" type="text/css">
+  <p>Double-click a circle to open list of all grants for that country</p>
   <script>
     // Set up the map dimensions
     const margin = { top: 10, right: 10, bottom: 10, left: 10 };
     const width = window.innerWidth - margin.left - margin.right;
-    const height = window.innerHeight - margin.top - margin.bottom;
+    const height = window.innerHeight - margin.top - margin.bottom - 40;
 
     // Create an SVG element
     const svg = d3.select('body')
@@ -146,7 +147,9 @@
         .attr('r', d => scale(d.properties.eur))
         .attr('fill', d => countryColorScale(d.properties.name))
         .attr('stroke', 'black')
-        .attr('stroke-width', 1);
+        .attr('stroke-width', 1)
+        .on('dblclick', function(){
+          window.open("https://github.com/idaflik/temporary-sw/blob/main/R/output/frontex_grants_all_grants.csv", '_blank')});
 
       // Add text to the 15 largest circles
       const textLabels = svg.selectAll('text')

@@ -1,0 +1,22 @@
+unit_sector,unit_sector_long,source
+SBS,Sea Border Sector,https://www.statewatch.org/media/documents/news/2017/feb/eu-frontex-operation-hera-2013-annexes-censored.pdf
+FDU,Field Deployment Unit,https://prd.frontex.europa.eu/wp-content/uploads/tt0420321esn_002.pdf
+ECRet,European Centre for Returns
+DMD,Deployment Management Division
+ORD,Operational Response Division,https://www.frontex.europa.eu/careers/who-we-are/structure/divisions/operational-response-division/
+RSU,Return Support Unit,https://edps.europa.eu/sites/edp/files/register/notification_file/1422-2017-0007.pdf
+FOU,Field Operations Unit
+LBS,Land Borders Sector,https://ebcgday.eu/ed4bg/2011/speakers/
+ROS,Return Operations Sector,https://edps.europa.eu/system/files_de?file=2021-11/0026_2021-0290_16_redacted.pdf
+TRU,Training Unit
+ABS,Air Border Sector,https://www.statewatch.org/media/documents/news/2016/aug/frontex-serious-incident-reporting.pdf
+TF Deploy, Task Force Deployment Management,https://www.frontex.europa.eu/assets/Careers/SNE/2020/S_N_E_Senior_Advisor_in_Team_Generation.pdf
+FSC,Frontex Situation Centre,https://www.frontex.europa.eu/assets/Publications/General/Frontex_at_a_Glance.pdf
+PRU,Pooled Resources Unit,https://www.frontex.europa.eu/assets/Publications/General/12_seconds_to_decide.pdf
+CGS,Coast Guard Sector,
+RDU,Research and Development Unit,Research and Development Unit,https://www.frontex.europa.eu/innovation/announcements/document-challenge-ii-announcement-to-industry-D2rPry
+PRS,Public Regulated Service,https://entrusted.eu/about-entrusted/consortium
+RIU,Research and Innovation Unit,Research and Innovation Unit
+IFC,Information Fusion Centre,
+LES,Law Enforcement Sector,
+RAU,Risk Analysis Unit,https://www.frontex.europa.eu/assets/Data_Protection/Privacy_Statement.pdf
