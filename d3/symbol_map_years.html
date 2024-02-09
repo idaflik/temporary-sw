@@ -199,7 +199,10 @@ svg.selectAll('circle')
         })
         .on("mouseout", function () {
             tooltip.style("display", "none");
-        });
+        })
+        .on('dblclick', function(d){
+          window.open("https://github.com/idaflik/temporary-sw/blob/main/R/output/frontex_grants_all_"+ d.properties.name +".csv", '_blank')});
+;
 
         svg.selectAll('.country')
         .on('mouseover', (event, d) => {
@@ -211,7 +214,10 @@ svg.selectAll('circle')
         })
         .on("mouseout", function () {
             tooltip.style("display", "none");
-        });
+        })
+        .on('dblclick', function(d){
+          window.open("https://github.com/idaflik/temporary-sw/blob/main/R/output/frontex_grants_all_"+ d.properties.name +".csv", '_blank')});
+;
         
 });
 }

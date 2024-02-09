@@ -307,7 +307,7 @@ alldata_sorted <- data_allyears_clean %>%
 write_csv(alldata_sorted, "output/frontex_grants_all_grants.csv")
 
 for(cur_country in unique(alldata_sorted$country)){
-  write_csv(alldata_sorted %>% filter(country == cur_country),
+  write_csv(data_allyears_clean %>% filter(country == cur_country),
             glue("output/frontex_grants_all_{cur_country}.csv"))
 }
 

@@ -11,7 +11,7 @@
 
 <body>
   <link href="stylesheet.css" rel="stylesheet" type="text/css">
-  <p>Double-click a circle to open list of all grants for that country</p>
+  <p style = "text-align: center;">Double-click a circle to open list of all grants for that country</p>
   <script>
     // Set up the map dimensions
     const margin = { top: 10, right: 10, bottom: 10, left: 10 };
@@ -148,8 +148,8 @@
         .attr('fill', d => countryColorScale(d.properties.name))
         .attr('stroke', 'black')
         .attr('stroke-width', 1)
-        .on('dblclick', function(){
-          window.open("https://github.com/idaflik/temporary-sw/blob/main/R/output/frontex_grants_all_grants.csv", '_blank')});
+        .on('dblclick', function(d){
+          window.open("https://github.com/idaflik/temporary-sw/blob/main/R/output/frontex_grants_all_"+ d.properties.name +".csv", '_blank')});
 
       // Add text to the 15 largest circles
       const textLabels = svg.selectAll('text')
