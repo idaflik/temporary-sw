@@ -33,7 +33,10 @@ const svg = d3.select('body')
 var tooltip = d3.select("body")
     .append("div")
     .attr("class", "tooltip")
+    .style("width", "150px")
     .style("display", "none");
+
+var isMobile = window.innerWidth < 768; // Adjust the threshold as needed
     
 var countryColorScale = d3.scaleOrdinal()
 // Load GeoJSON file
@@ -126,13 +129,14 @@ function renderChart(geojson, selectedYear) {
     const scale = 0.9 / Math.max(boundingBoxWidth / width, boundingBoxHeight / height);
 
     // Calculate the center of the bounding box
-    const centerX = (x0 + x1) / 2;
+    const centerX = (x0 + x1) / 2 + 20;
     const centerY = (y0 + y1) / 2;
 
+    console.log(centerX)
     // Create a projection with automatic fitting
     const projection = d3.geoMercator()
         .center([centerX, centerY])
-        .scale(scale * window.innerHeight / 10) // Adjust the initial scale as needed
+        .scale(scale * window.innerHeight /  (isMobile ? 4 : 10)) // Adjust the initial scale as needed
         .translate([width / 2, height / 2]);
 
     // Create a path generator
@@ -176,8 +180,11 @@ const eurScale = d3.scaleLinear()
 
 function showTooltip(event, d) {
 const [x, y] = d3.mouse(svg.node());
-        tooltip.style('left', (x) + 'px')
-          .style('top', (y - 28) + 'px')
+// Check if the mouse is in the right half of the screen
+const isMouseOnRightHalf = x > window.innerWidth / 2;
+
+        tooltip.style('left', (isMouseOnRightHalf ? x - 150 : x ) + 'px')
+          .style('top', (y) + 'px')
           .html( filteredData.features[d].properties.name +" "+ selectedYear + "<br>Total grants: " + formatAbbreviation(filteredData.features[d].properties.eur));
 }
 // Calculate and draw centroids

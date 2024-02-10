@@ -66,6 +66,8 @@
 
     var menu = d3.select("#KEY")
 
+    var isMobile = window.innerWidth < 768; // Adjust the threshold as needed
+
     d3.csv("https://raw.githubusercontent.com/idaflik/temporary-sw/main/R/output/frontex_grants_countries_sectors.csv").then(d => chart(d))
 
     function chart(csv) {
@@ -82,9 +84,8 @@
       var svg = d3.select("#chart"),
         margin = { top: 20, left: 60, bottom: 0, right: 15 },
         width = window.innerWidth - margin.left - margin.right,
-        height = window.innerHeight - margin.top - margin.bottom - 250;
-      // -100 height to leave space for the selector within iframe
-
+        height = window.innerHeight - margin.top - margin.bottom - (isMobile ? (window.innerHeight * 0.7) : 300);
+     
       svg.attr("width", width + margin.left) // margin.right should stay empty
         .attr("height", height + margin.top) // margin.bottom should stay empty
 
@@ -187,6 +188,7 @@
         .call(d3.axisBottom(x)
           .tickSize(0) // To remove tick lines
           .tickPadding(6) // Adjust padding as needed
+          .tickValues(isMobile ? [data[0].year, data[data.length - 1].year] : null) // Specify only the first and last ticks if isMobile is true
         )
         .selectAll(".tick text")
         .attr("transform", function (d) {
@@ -219,27 +221,35 @@
           .attr("d", area)
           .attr("stroke", "white")
           .attr("stroke-width", 0.7)
-          .on("mousemove", function(d) {
-            
+          .on("mousemove", function(d) {            
             var mouseCoords = d3.mouse(this);
             var mouseX = mouseCoords[0];
             var bandIndex = Math.floor((mouseX - (x.range()[0] - x.step() * x.paddingOuter() / 2)) / x.step());
             var year = x.domain()[bandIndex]
             
             var cur_value = d[bandIndex][1] - d[bandIndex][0]
+            
+            // Check if the cursor is in the right half of the screen
+            var isRightHalf = mouseX > window.innerWidth / 2;
+
+            // Calculate tooltip width and position offset
+            var tooltipWidth = tooltip.node().offsetWidth;
+            var tooltipOffsetRight = isRightHalf ? -5 - tooltipWidth : 5;
 
            // Calculate tooltip position
-            var tooltipX = mouseX; // Adjust as needed
             var tooltipY = mouseCoords[1]; // Adjust as needed
 
             // Use the abbreviated format for numbers larger than or equal to 1000
             var formattedCurValue = cur_value >= 1000 ? formatAbbreviation(cur_value) : d3.format("$.0f")(cur_value);
             
             tooltip
+            .transition()
+            .duration(100) // Adjust duration as needed
             .style("display", "inline-block")
-            .style("left", (x(year) + 5) + "px")
+            .style("left", (x(year) + tooltipOffsetRight) + "px")
             .style("top", tooltipY + "px")
-            .html(curCountry + " " + year + "<br>" + " Total: "+ formatAbbreviation(totalsByYear[year])  +"<br>" +d.key + ": " + formatAbbreviation(cur_value) );
+            
+            tooltip.html(curCountry + " " + year + "<br>" + " Total: "+ formatAbbreviation(totalsByYear[year])  +"<br>" +d.key + ": " + formatAbbreviation(cur_value) );
 
              // Update tooltip line position
             tooltipLine

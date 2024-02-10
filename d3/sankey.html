@@ -33,11 +33,7 @@
 
 var units = "Widgets";
 
-
-	// margin = {top: 20, left: 100, bottom: 0, right: 15},
-	// width = window.innerWidth - margin.left - margin.right,
-	// height = window.innerHeight - margin.top - margin.bottom - 150;
-  // -100 height to leave space for the selector within iframe
+var isMobile = window.innerWidth < 768; // Adjust the threshold as needed
 
 var    margin = {top: 10, right: 10, bottom: 10, left: 10},
   width = window.innerWidth - margin.left - margin.right,
@@ -190,17 +186,26 @@ sankey
       // Adjust tooltip position based on mouse x-position
       var tooltipX = d3.event.pageX > window.innerWidth / 2 ? d3.event.pageX - 250 : d3.event.pageX + 10;
       
+      if (isMobile) {
+        // Add the name of the target node
+        var tooltipContent = "Year/Grant No: " + d.grant_no + "<br>"+
+        "<strong>" + d3.format("$.2s")(d.real_value).replace('$', '€')  + "</strong>"+  " to <strong>" + d.target.name +"</strong><br>"+
+        "for " +d.desc_clean + "<br>"+
+          "Sector: " + d.unit_sector;
+    }else{
+      var tooltipContent = "Year/Grant No: " + d.grant_no + "<br>"+
+        "<strong>" + d3.format("$.2s")(d.real_value).replace('$', '€')  + "</strong>"+ "<br>"+
+        "for " +d.desc_clean + "<br>"+
+          "Sector: " + d.unit_sector
+    }
+
     d3.select(".tooltip")
     .style("left", tooltipX + "px") // Use the adjusted tooltipX position
         .style("top", d3.event.pageY + "px")
        .style("display", "inline-block")
-       .html(
-       "Year/Grant No: " + d.grant_no + "<br>"+
-        "<strong>" + d3.format("$.2s")(d.real_value).replace('$', '€')  + "</strong>"+ "<br>"+
-        "for " +d.desc_clean + "<br>"+
-          "Sector: " + d.unit_sector );
-
+       .html(tooltipContent );
     })
+
     .on("mousemove", function(){
       // Adjust tooltip position based on mouse x-position
       var tooltipX = d3.event.pageX > window.innerWidth / 2 ? d3.event.pageX - 250 : d3.event.pageX + 10;
@@ -239,25 +244,46 @@ var totalValue = d3.sum(graph.links, function(d) {
 });
 
 // add in the title for the nodes
- node.append("text")
-      .attr("class", "sankey_label")
-      .attr("class", "mono-ticks")
-     .attr("x", -6)
-     .attr("y", function(d) { return d.dy / 2; })
-     .attr("dy", ".35em")
-     .attr("text-anchor", "end")
-     .style('pointer-events', 'none')
-     .style('font-size', '0.85rem') // Set the font size to be smaller
-     .attr("transform", null)
-     .text(function(d) { return d.name ; })
-     .filter(function(d) { return d.x < width / 2; })
-     .attr("x", 6 + sankey.nodeWidth())
-     .attr("text-anchor", "start")
-     .text(function(d) { return d.name + " (" + d3.format("$.2s")(totalValue).replace('$', '€') + " in total)"; });
+node.append("text")
+    .attr("class", "sankey_label mono-ticks")
+    .attr("x", function(d) {
+        // Adjust label position for left/source nodes
+        return d.x < width / 2 ? 6 : -6; // Left-align with slight offset to the right
+    })
+    .attr("y", function(d) { return d.dy / 2; })
+    .attr("dy", ".35em")
+    .attr("text-anchor", function(d) {
+        // Adjust text-anchor based on the node's position
+        return d.x < width / 2 ? "start" : "end";
+    })
+    .style('pointer-events', 'none')
+    .style('font-size', '0.85rem') // Set the font size to be smaller
+    .text(function(d) {
+        // Modify node label based on isMobile variable
+        if (isMobile) {
+            // Show labels only for left/source nodes
+            return d.x < width / 2 ? d.name : "";
+        } else {
+            // Show labels for all nodes
+            return d.name;
+        }
+    })
+    .filter(function(d) {
+        // Filter nodes based on isMobile variable
+        return !isMobile || d.x < width / 2;
+    })
+    .text(function(d) {
+        // Modify node label text based on isMobile variable
+        if (isMobile && d.x >= width / 2) {
+            // Add the total value for each target node
+            return d.name + " (" + d3.format("$.2s")(totalValue).replace('$', '€') + " in total)";
+        } else {
+            return d.name;
+        }
+    });
 }
 });
-  
-        });
+});
 
 
 </script>
