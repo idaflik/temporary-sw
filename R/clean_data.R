@@ -1,31 +1,11 @@
-# to do:
-#   - clean beneficiaries
-#   - make consistent color scale for countries 
-# 
-#   1) bubble chart
-# - 2) years symbol map:
-#   -> adjust zoom for mobile
-#   -> adjust circle scale based on zoom / window height
-# - 3) area chart: 
-# -> try removing 0 values for countries/years
-# - 4) top 20 projects (if we find more info on projects and their relevance, maybe revise)
-# - 5) sankey
-#  -> change links to individual grants, more info when hovering (year, project, name, sector?)
-
 library(needs)
 needs(tidyverse,
-      ggbump,
       sf,
-      ggridges,
       glue,
       wbstats,
       rnaturalearth,
-      scales,
-      # ggsankey,
-      networkD3,
       readxl,
-      ggplot2,
-      scales)
+      ggplot2)
 
 sheetnames <- excel_sheets("Grants_2008_2022.xlsx")
 
